@@ -119,7 +119,7 @@ p > span:hover{
     background-color: #c3dfed;
     color: black;
 }
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .container{
         flex-direction: column;
         justify-content: center;
@@ -168,7 +168,7 @@ p > span:hover{
         height: 35px;
     }
 }
- @media (max-width: 580px) {
+ @media  screen and (max-width: 580px) {
   .child2 {
     flex-direction: column;       
     align-items: center;
@@ -183,7 +183,7 @@ p > span:hover{
     gap: 10px;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     flex-direction: column;
     justify-content: center;
