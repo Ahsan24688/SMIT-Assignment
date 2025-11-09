@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
@@ -6,7 +7,9 @@
     font-family: "Roboto", sans-serif;
 }
 .container{
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     background-image: url(789.jpg);
     height: 100vh;
     background-size: cover;
@@ -17,7 +20,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(5, 245, 245, 45%);
+    background-color: rgba(5, 245, 245, 50%);
     padding: 10px 50px;
     
 
@@ -29,6 +32,7 @@ nav{
     font-weight: bold;
     font-size: 30px;
     gap: 10px;
+    width: 50%;
 }
 
 ul{
@@ -71,12 +75,13 @@ li:hover{
 .c-item{
     display: flex;
     flex-direction: column;
-    background-color: rgba(36, 223, 223, 45%);
+    background-color: rgba(36, 223, 223, 50%);
     border-radius: 7px;
     margin: 6px;
-    padding: 5px;
-    height: 400px;
+    padding: 20px;
+    /* height: 400px; */
     justify-content: center;
+    gap: 10px;
  
 }
 .c-item .s-items{
@@ -85,19 +90,20 @@ li:hover{
     font-size: 80px;
     /* background-color: brown; */
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    padding: 20px;   
 }
 .c-item:hover{
     box-shadow: 0 10px 20px rgb(0, 0, 0);
 }
 h3{
-    font-weight: bold;
-    font-size: 50px;
+    font-weight: 500;
+    font-size: 36px;
     
 }
-.c-item p{
+.para{
     /* text-align: center; */
-    font-size: 20px;
+    font-size: 24px;
 }
 @media screen and (max-width: 768px) {
     .container{
@@ -187,7 +193,7 @@ h3{
     .car-item{
         flex-wrap: wrap;
         height: auto;
-        padding: 20px;
+        padding: 5px;
         width: 100%;
     }
     .menu-text{
@@ -213,16 +219,19 @@ h3{
         font-size: 25px;
     }
 } 
- @media screen and (max-width: 320px){
+ @media screen and (max-width: 425px){
      .container{
-        height: auto;
+        height: 100vh;
         background-position: center;
         background-size: cover;
+    }
+    nav{
+        padding: 5px 5px;
     }
     .car-item{
         flex-wrap: wrap;
         height: auto;
-        padding: 10px;
+        padding: 0px;
         width: 100%;
     }
     .menu-text{
