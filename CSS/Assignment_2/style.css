@@ -48,6 +48,7 @@ li{
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    /* padding: 5px; */
 }
 li:hover{
     border-radius: 10px;
@@ -251,7 +252,7 @@ h3{
         /* margin-top: 0px; */
     }
     h3{
-       font-size: 2dvh;
+       font-size: 2vh;
     }
     .c-item p{
         font-size: 15px;
