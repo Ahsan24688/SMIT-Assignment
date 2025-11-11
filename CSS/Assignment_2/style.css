@@ -222,7 +222,7 @@ h3{
 } 
  @media screen and (max-width: 425px){
      .container{
-        height: 100vh;
+        height: auto;
         background-position: center;
         background-size: cover;
     }
