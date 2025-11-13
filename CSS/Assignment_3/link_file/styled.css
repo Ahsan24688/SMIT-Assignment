@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #3C40C6;
+    height: 100vh;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.child1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+}
+.child1 a{
+    text-decoration: none;
+    color: black;
+}
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+.div1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.child2{
+    background-color: violet;
+}
+.main2{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 2px;  */
+    padding: 5px;
+    
+}
+.boxes{
+    width: 20%;
+    height: 150px;
+    background-color: rgb(183, 47, 47);
+}
+
+
