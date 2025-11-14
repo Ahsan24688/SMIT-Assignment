@@ -6,12 +6,15 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #3C40C6;
-    height: 100vh;
+    min-height: 100vh;
 }
 .main{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 .child1{
     width: 100%;
@@ -36,6 +39,7 @@ a{
     color: white;
     padding: 5px;
     border-radius: 4px;
+    display: block !important;
 }
 .div1{
     display: flex;
@@ -44,19 +48,64 @@ a{
     gap: 10px;
 }
 .child2{
+    display: flex;
+    flex-direction: column;
     background-color: violet;
+    flex-grow: 1;
 }
 .main2{
     display: flex;
     flex-wrap: wrap;
     /* gap: 2px;  */
-    padding: 5px;
+    /* padding: 5px; */
+    flex-grow: 1;
+    
     
 }
 .boxes{
+    display: flex;
+    flex-direction: column;
     width: 20%;
-    height: 150px;
+    padding: 7px;
     background-color: rgb(183, 47, 47);
+    color: white;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.copy{
+    padding: 7px 10px;
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: none;
+    
+}
+.boxes:hover .copy {
+    display: block;
+    
+}
+@media screen and (max-width: 786px){
+    .boxes{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 480px){
+    .boxes{
+        font-size: 5px;
+    }
+    .btn{
+        display: none !important;
+    }
 }
 
 
