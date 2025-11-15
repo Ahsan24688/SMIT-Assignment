@@ -78,20 +78,28 @@ a{
 }
 .copy{
     padding: 7px 10px;
-    color:black;
+    color:white;
     font-weight: bold;
     font-size: 20px;
-    border: 1px solid black;
-    border-radius: 7px;
+    border: 1px solid white;
+    border-radius: 4px;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    display: none;
-    
+    /* display: none; */
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease; 
+
 }
+    
 .boxes:hover .copy {
-    display: block;
+    /* display: block; */
+    opacity: 1;
+    pointer-events: auto;
     
 }
 @media screen and (max-width: 786px){
