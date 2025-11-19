@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: aqua;
+    min-height: 100vh;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+    padding: 10px;
+    margin: 5px;
+    /* background-color: blueviolet; */
+}
+li{
+    cursor: pointer;
+    font-size: 14px;
+}
+nav ul li{
+    position: relative;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* width: 20px;
+    height: 20px;
+    padding: 10px; */
+    /* background-color: blue; */
+}
+.dropdown{
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-13%);
+    background-color: white;
+    width: 100vw;
+    /* height: 450px; */
+    padding: 30px;
+    transition: 0.5s;
+    align-items: flex-start
+}
+nav ul li:hover .dropdown, .dropdown:hover{
+    display: flex;
+}
+.dropdown ul{
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    /* background-color: aquamarine; */
+    width: 300px;
+}
+.dropdown ul li{
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(81, 80, 80);
+    cursor: pointer;
+}
+.dropdown ul li:hover{
+    color: black;
+}
+.dropdown ul p{
+    width: 200px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.dropdown ul p:hover{
+    color: black;
+}
+.quick_links ul{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: aliceblue;
+    width: 250px;
+}
+    
