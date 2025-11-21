@@ -6,53 +6,54 @@
     font-family: 'Inter', sans-serif;
 }
 body{
-    background-color: aqua;
     min-height: 100vh;
     /* display: flex; */
     /* flex-direction: column; */
 }
 nav{
     width: 100%;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f8ff;
-    position: relative;
-    gap: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    /* position: relative; */
+    gap: 10px;
 }
 .img{
     width: auto;
     display: flex;
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
     cursor: pointer;
     gap: 10px;
+    color: white;
 }
 nav ul{
-    width: auto;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    gap: 40px;
-    padding: 10px;
+    gap: 20px;
+    padding: 5px;
     margin: 0px;
-    /* display: block!important; */
-    
-    /* background-color: blueviolet; */
+    transition: 0.5s;
 }
 li{
     cursor: pointer;
     font-size: 14px;
 }
-/* nav ul li{
-    position: relative;
-} */
 .icons{
     width: auto;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 20px;
     cursor: pointer;
-    /* justify-content: flex-start; */
+    order: 1;
+    justify-content: flex-start;
+    color: white;
 }
 .Mega_box{
     /* display: none; */
@@ -61,7 +62,7 @@ li{
     width: 100%;
     top: 5%;
     padding: 30px;
-    background-color: #f0f8ff;
+    background-color: rgb(0, 0, 0);
     visibility: hidden;
     opacity: 0; 
      transition: all 0.4s ease-in-out;
@@ -70,18 +71,16 @@ nav ul li:hover .Mega_box{
     visibility: visible;
     opacity: 1;
     top: 54px;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
 }
 .content{
     display: flex;
     width: 100%;
     padding: 25px 40px;
-    justify-content: space-between;
-    /* background-color: blueviolet; */
+    justify-content: center;
 }
 .main{
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -101,5 +100,69 @@ nav ul li:hover .Mega_box{
 .main p{
     font-size: 20px;
     font-weight: bold;
+}
+.togglemenu{
+    display: none;
+}
+.checkbtn{
+    opacity: 0;
+}
+@media screen and (max-width: 768px) {
+    .Mega_box{
+        display: none;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        gap: 10px;
+    }
+    .img{
+        display: flex;
+         width: 100%; 
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+
+    }
+    .icons{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 8px;
+        justify-content: flex-end;
+        
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 20px;
+        
+    }
+    .checkbtn{
+        width: 5%; 
+        opacity: 1;
+        cursor: pointer;
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    #toggle_menu:checked ~ ul{
+        display: flex;
+    }
+}
+@media screen and (max-width: 425px){
+    .main{
+        width: 100%;
+    }
 }
 
