@@ -18,8 +18,8 @@ nav{
     align-items: center;
     background-color: rgb(0, 0, 0);
     color: white;
-    /* position: relative; */
     gap: 10px;
+    z-index: 10;
 }
 .img{
     width: auto;
@@ -28,6 +28,7 @@ nav{
     cursor: pointer;
     gap: 10px;
     color: white;
+    
 }
 nav ul{
     width: 60%;
@@ -36,9 +37,10 @@ nav ul{
     align-items: center;
     list-style-type: none;
     gap: 20px;
-    padding: 5px;
+    padding: 10px;
     margin: 0px;
     transition: 0.5s;
+    z-index: 10;
 }
 li{
     cursor: pointer;
@@ -60,7 +62,7 @@ li{
     position: absolute;
     left: 0;
     width: 100%;
-    top: 5%;
+    top: 54px;
     padding: 30px;
     background-color: rgb(0, 0, 0);
     visibility: hidden;
@@ -107,6 +109,279 @@ nav ul li:hover .Mega_box{
 .checkbtn{
     opacity: 0;
 }
+.image_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 0;
+    margin-bottom: 10px;
+}
+.image{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_container h1{
+    position: absolute;
+    top: 65%;
+    font-size: 50px;   
+    color: white;
+}
+.image_container p{
+     position: absolute;
+    top: 77%; 
+    font-size: 25px;
+    color: white;
+}
+.image_container button{
+    position: absolute;
+    top: 85%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.image_containerr{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+}
+.imagee{
+     width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_containerr h1{
+    position: absolute;
+    top: 5%;
+    font-size: 50px;   
+    color: white;
+}
+.image_containerr p{
+     position: absolute;
+    top: 20%; 
+    font-size: 25px;
+    color: white;
+}
+.image_containerr .btn{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.image_containerr .btnn{
+    position: absolute;
+    top: 30%;
+    left: 52%;   
+    background-color: black;
+    border: 1px solid darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.btnn:hover{
+    background-color: darkslateblue;
+    color: white;
+}
+.image_container_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+}
+.image_1{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_container_1 h1{
+    position: absolute;
+    top: 5%;
+    font-size: 50px;   
+    color: black;
+}  
+.image_container_1 p{
+     position: absolute;
+    top: 20%; 
+    font-size: 25px;
+    color: black;
+} 
+.image_container_1 .btn{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.image_container_1 .btnn{
+    position: absolute;
+    top: 30%;
+    left: 52%;   
+    background-color: white;
+    border: 1px solid darkslateblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.btnn:hover{
+    background-color: darkslateblue;
+    color: white;
+} 
+.image_container_2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+.item2{
+    width: 48%;
+    position: relative;
+}
+.image_2{
+    width: 100%;
+    background-position: left;
+    object-fit: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_container_2 .h12{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    font-size: 50px;   
+    color: black;
+}  
+.image_container_2 .p2{
+     position: absolute;
+     left: 10%;
+    top: 20%; 
+    font-size: 25px;
+    color: black;
+}
+.image_container_2 .btn2{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.image_container_2 .btnn2{
+    position: absolute;
+    top: 30%;
+    left: 10%;   
+    background-color: white;
+    border: 1px solid darkslateblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.image_container_3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+}
+.item3{
+    width: 48%;
+    position: relative;
+}
+.image_3{
+    width: 100%;
+    background-position: left;
+    object-fit: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_container_3 .h13{
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: 50px;   
+    color: black;
+}  
+.image_container_3 .p3{
+     position: absolute;
+    top: 30%; 
+    right: 20%;
+    font-size: 25px;
+    color: black;
+}
+.image_container_3 .btn3{
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.image_container_3 .btnn3{
+    position: absolute;
+    top: 30%;
+    right: 10%;   
+    background-color: white;
+    border: 1px solid darkslateblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
 @media screen and (max-width: 768px) {
     .Mega_box{
         display: none;
@@ -144,7 +419,7 @@ nav ul li:hover .Mega_box{
         background-color: rgb(0, 0, 0);
         color: white;
         padding: 20px;
-        
+        transition: 0.5s;
     }
     .checkbtn{
         width: 5%; 
