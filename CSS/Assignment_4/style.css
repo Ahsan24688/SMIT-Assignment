@@ -190,7 +190,7 @@ nav ul li:hover .Mega_box{
     font-size: 20px;
     cursor: pointer;
 } 
-.image_containerr .btnn{
+/* .image_containerr .btnn{
     position: absolute;
     top: 30%;
     left: 52%;   
@@ -201,11 +201,11 @@ nav ul li:hover .Mega_box{
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
-} 
-.btnn:hover{
+}  */
+/* .btnn:hover{
     background-color: darkslateblue;
     color: white;
-}
+} */
 .image_container_1{
     display: flex;
     justify-content: center;
@@ -247,7 +247,7 @@ nav ul li:hover .Mega_box{
     font-size: 20px;
     cursor: pointer;
 } 
-.image_container_1 .btnn{
+/* .image_container_1 .btnn{
     position: absolute;
     top: 30%;
     left: 52%;   
@@ -258,11 +258,11 @@ nav ul li:hover .Mega_box{
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
-} 
-.btnn:hover{
+}  */
+/* .btnn:hover{
     background-color: darkslateblue;
-    color: white;
-} 
+    color: white; 
+}/*/ 
 .image_container_2{
     display: flex;
     justify-content: center;
@@ -358,7 +358,7 @@ nav ul li:hover .Mega_box{
     font-size: 20px;
     cursor: pointer;
 } 
-.image_container_3 .btnn3{
+/* .image_container_3 .btnn3{
     position: absolute;
     top: 32%;
     right: 26%;   
@@ -369,7 +369,7 @@ nav ul li:hover .Mega_box{
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
-}
+} */
 .image_container_4, .image_container_5{
     display: flex;
     justify-content: center;
@@ -444,7 +444,7 @@ nav ul li:hover .Mega_box{
     font-size: 20px;
     cursor: pointer;
 }
-.image_container_4 .btnn4{
+/* .image_container_4 .btnn4{
     position: absolute;
     top: 27%;
     left: 51%;   
@@ -467,7 +467,7 @@ nav ul li:hover .Mega_box{
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
-}
+} */
 .image_container_6, .image_container_7{
     display: flex;
     justify-content: center;
@@ -514,7 +514,7 @@ nav ul li:hover .Mega_box{
 .image_container_7 .p7{
      position: absolute;
     top: 20%; 
-    right: 26%;
+    left: 28%;
     font-size: 24px;
     color: black;
 }
@@ -532,7 +532,7 @@ nav ul li:hover .Mega_box{
 }
  .image_container_7 .btn7{
     position: absolute;
-    top: 36%;
+    top: 40%;
     right: 36%;
     background-color: darkslateblue;
     color: white;

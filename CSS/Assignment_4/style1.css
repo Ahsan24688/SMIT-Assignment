@@ -50,96 +50,10 @@
     #toggle_menu:checked ~ ul{
         display: flex;
     }
-    .image_container h1,
-    .image_containerr h1,
-    .image_container_1 h1,
-    .image_container_2 .h12,
-    .image_container_3 .h13,
-    .image_container_4 .h14,
-    .image_container_5 .h15,
-    .image_container_6 .h16,
-    .image_container_7 .h17 {
-        font-size: 24px;
-        top: calc(50% - 20px); /* adjust vertical for smaller screens */
+    .imagee{
+        background-image: url(hero_iphone_17_pro__bknyzxfk2agi_small_2x123.jpg);
     }
-    .image_container p,
-    .image_containerr p,
-    .image_container_1 p,
-    .image_container_2 .p2,
-    .image_container_3 .p3,
-    .image_container_4 .p4,
-    .image_container_5 .p5,
-    .image_container_6 .p6,
-    .image_container_7 .p7 {
-        font-size: 16px;
-        top: calc(50% + 20px);
-    }
-    .image_container button,
-    .image_containerr .btn,
-    .image_containerr .btnn,
-    .image_container_1 .btn,
-    .image_container_1 .btnn,
-    .image_container_2 .btn2,
-    .image_container_3 .btn3,
-    .image_container_3 .btnn3,
-    .image_container_4 .btn4,
-    .image_container_4 .btnn4,
-    .image_container_5 .btn5,
-    .image_container_5 .btnn5,
-    .image_container_6 .btn6,
-    .image_container_7 .btn7 {
-        font-size: 14px;
-        padding: 6px 12px;
-        top: calc(50% + 60px);
-    }
-    .image_container .image,
-    .image_containerr .imagee,
-    .image_container_1 .image_1,
-    .image_container_2 .image_2,
-    .image_container_3 .image_3,
-    .image_container_4 .image_4,
-    .image_container_5 .image_5,
-    .image_container_6 .image_6,
-    .image_container_7 .image_7 {
-        height: 350px;
-    }
-    .image_container_2 .h12,
-    .image_container_3 .h13,
-    .image_container_4 .h14,
-    .image_container_5 .h15,
-    .image_container_6 .h16,
-    .image_container_7 .h17 {
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        text-align: center;
-    }
-    .image_container_2 .p2,
-    .image_container_3 .p3,
-    .image_container_4 .p4,
-    .image_container_5 .p5,
-    .image_container_6 .p6,
-    .image_container_7 .p7 {
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        text-align: center;
-    }
-    .image_container_2 .btn2,
-    .image_container_3 .btn3,
-    .image_container_3 .btnn3,
-    .image_container_4 .btn4,
-    .image_container_4 .btnn4,
-    .image_container_5 .btn5,
-    .image_container_5 .btnn5,
-    .image_container_6 .btn6,
-    .image_container_7 .btn7 {
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-        top: auto;
-        margin-top: 10px;
-    }
+    
 
     .item2, .item3, .item4, .item5, .item6, .item7 {
         width: 100%;
@@ -157,8 +71,28 @@
 @media screen and (max-width: 425px){
     .main{
         width: 100%; 
-    }    
-    .image_container h1,
+    } 
+    .image_container .image,
+    .image_containerr .imagee,
+    .image_container_1 .image_1,
+    .image_container_2 .image_2,
+    .image_container_3 .image_3,
+    .image_container_4 .image_4,
+    .image_container_5 .image_5,
+    .image_container_6 .image_6,
+    .image_container_7 .image_7 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        height: 500px; 
+    }
+    .item2, .item3, .item4, .item5, .item6, .item7 {
+        width: 100%;
+        margin: 0 auto;
+    }  
     .image_containerr h1,
     .image_container_1 h1,
     .image_container_2 .h12,
@@ -167,9 +101,12 @@
     .image_container_5 .h15,
     .image_container_6 .h16,
     .image_container_7 .h17 {
-        font-size: 25px;
+        left: 50% !important;
+        top: 10% !important;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 20px;
     }
-    .image_container p,
     .image_containerr p,
     .image_container_1 p,
     .image_container_2 .p2,
@@ -178,23 +115,28 @@
     .image_container_5 .p5,
     .image_container_6 .p6,
     .image_container_7 .p7 {
-        font-size: 16px;
+        left: 50% !important;
+        top: 20% !important;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 14px; 
     }
-    .image_container button,
     .image_containerr .btn,
-    .image_containerr .btnn,
     .image_container_1 .btn,
-    .image_container_1 .btnn,
     .image_container_2 .btn2,
     .image_container_3 .btn3,
-    .image_container_3 .btnn3,
     .image_container_4 .btn4,
-    .image_container_4 .btnn4,
     .image_container_5 .btn5,
-    .image_container_5 .btnn5,
     .image_container_6 .btn6,
     .image_container_7 .btn7 {
-        font-size: 14px;
-        padding: 6px 12px;
+        top: 38% !important;
+        left: 30% !important;
+        /* transform: translateX(-50%); */
+        font-size: 14px; 
+        /* padding: 6px 12px;  */
+    }
+    .move_image{
+        width: 100%;
+        height: 150px;
     }
 }
