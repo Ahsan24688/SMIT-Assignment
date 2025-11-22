@@ -129,7 +129,7 @@ nav ul li:hover .Mega_box{
 .image_container h1{
     position: absolute;
     top: 65%;
-    font-size: 50px;   
+    font-size: 40px;  
     color: white;
 }
 .image_container p{
@@ -231,7 +231,7 @@ nav ul li:hover .Mega_box{
 }  
 .image_container_1 p{
      position: absolute;
-    top: 20%; 
+    top: 16%; 
     font-size: 25px;
     color: black;
 } 
@@ -271,7 +271,7 @@ nav ul li:hover .Mega_box{
     position: relative;
     z-index: 0;
     margin-bottom: 10px;
-    gap: 20px;
+    gap: 25px;
 }
 .item2{
     width: 48%;
@@ -287,22 +287,22 @@ nav ul li:hover .Mega_box{
 }
 .image_container_2 .h12{
     position: absolute;
-    left: 10%;
-    top: 10%;
-    font-size: 50px;   
+     left: 18%;
+    top: 65%; 
+    font-size: 40px;   
     color: black;
 }  
 .image_container_2 .p2{
-     position: absolute;
-     left: 10%;
-    top: 20%; 
-    font-size: 25px;
+    position: absolute;
+    left: 22%;
+    top: 74%; 
+    font-size: 20px;
     color: black;
 }
 .image_container_2 .btn2{
     position: absolute;
-    top: 30%;
-    left: 0%;
+    top: 80%;
+    left: 40%;
     background-color: darkslateblue;
     color: white;
     padding: 10px 20px;
@@ -311,18 +311,6 @@ nav ul li:hover .Mega_box{
     font-size: 20px;
     cursor: pointer;
 } 
-.image_container_2 .btnn2{
-    position: absolute;
-    top: 30%;
-    left: 10%;   
-    background-color: white;
-    border: 1px solid darkslateblue;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 20px;
-    cursor: pointer;
-}
 .image_container_3{
     display: flex;
     justify-content: center;
@@ -346,22 +334,22 @@ nav ul li:hover .Mega_box{
 }
 .image_container_3 .h13{
     position: absolute;
-    top: 30%;
-    right: 20%;
+    top: 10%;
+    right: 24%;
     font-size: 50px;   
     color: black;
 }  
 .image_container_3 .p3{
      position: absolute;
-    top: 30%; 
-    right: 20%;
+    top: 20%; 
+    right: 22%;
     font-size: 25px;
     color: black;
 }
 .image_container_3 .btn3{
     position: absolute;
-    top: 30%;
-    right: 0%;
+    top: 32%;
+    right: 40%;
     background-color: darkslateblue;
     color: white;
     padding: 10px 20px;
@@ -372,8 +360,8 @@ nav ul li:hover .Mega_box{
 } 
 .image_container_3 .btnn3{
     position: absolute;
-    top: 30%;
-    right: 10%;   
+    top: 32%;
+    right: 26%;   
     background-color: white;
     border: 1px solid darkslateblue;
     color: black;
@@ -382,62 +370,229 @@ nav ul li:hover .Mega_box{
     font-size: 20px;
     cursor: pointer;
 }
-@media screen and (max-width: 768px) {
-    .Mega_box{
-        display: none;
-    }
-    nav{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 10px;
-        gap: 10px;
-    }
-    .img{
-        display: flex;
-         width: 100%; 
-        align-items: center;
-        justify-content: flex-start;
-        padding: 10px;
+.image_container_4, .image_container_5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+    gap: 25px;
+}
+.item4, .item5{
+    width: 48%;
+    position: relative;
+}
+.image_4, .image_5{
+    width: 100%;
+    background-position: left;
+    object-fit: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_container_4 .h14{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    font-size: 40px;   
+    color: black;
+}  
+.image_container_5 .h15{
+    position: absolute;
+    top: 10%;
+    right: 24%;
+    font-size: 40px;   
+    color: black;
+}
+.image_container_4 .p4{
+     position: absolute;
+    top: 19%; 
+    left: 20%;
+    font-size: 23px;
+    color: black;
+} 
+.image_container_5 .p5{
+     position: absolute;
+    top: 19%; 
+    right: 14%;
+    font-size: 25px;
+    color: black;
+}
+.image_container_4 .btn4{
+    position: absolute;
+    top: 27%;
+    left: 27%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.image_container_5 .btn5{
+     position: absolute;
+    top: 27%;
+    right: 46%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.image_container_4 .btnn4{
+    position: absolute;
+    top: 27%;
+    left: 51%;   
+    background-color: white;
+    border: 1px solid darkslateblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.image_container_5 .btnn5{
+     position: absolute;
+    top: 27%;
+    right: 32%;   
+    background-color: white;
+    border: 1px solid darkslateblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.image_container_6, .image_container_7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 10px;
+    gap: 25px;
+}
+.item6, .item7{
+    width: 48%;
+    position: relative;
+}
+.image_6, .image_7{
+    width: 100%;
+    background-position: left;
+    object-fit: cover;
+    display: block;
+    height: 600px;
+    position: relative;
+}
+.image_container_6 .h16{
+    position: absolute;
+    top: 10%;
+    left: 14%;
+    font-size: 40px;   
+    color: black;
+}  
+.image_container_7 .h17{
+     position: absolute;
+    top: 10%;
+    right: 36%;
+    font-size: 50px;   
+    color: black;
+}
+.image_container_6 .p6{
+     position: absolute;
+    top: 28%; 
+    left: 12%;
+    font-size: 20px;
+    color: black;
+} 
+.image_container_7 .p7{
+     position: absolute;
+    top: 20%; 
+    right: 26%;
+    font-size: 24px;
+    color: black;
+}
+.image_container_6 .btn6{
+    position: absolute;
+    top: 38%;
+    left: 28%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+ .image_container_7 .btn7{
+    position: absolute;
+    top: 36%;
+    right: 36%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.carousel{
+    margin: 5px;
+}
+.move_image{
+    margin: 10px;
+}
+.footer_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    padding: 40px;
+    line-height: 20px;
+    font-size: 16px;
+    background-color: rgb(227, 218, 218);
+}
+.footer_column{
+    display: flex;
+    padding: 40px;
+    margin: 10px;
+}
+.footer{
+    list-style-type: none;
+    /* gap: 10px;
+    margin: 10px;
+    color: black; */
+}
+.footer li a{
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+    margin: auto;
+    width: 150px;
+}
+.footer p{
+    width: 150px;
+    margin: 5px;
+    font-weight: 800;
+    padding: 5px;
+}
+.f_text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+.p7{
+     width: 100%;
+    display: flex;              
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
 
-    }
-    .icons{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        padding: 8px;
-        justify-content: flex-end;
-        
-    }
-    nav ul{
-        display: none;
-        position: absolute;
-        flex-direction: column;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        color: white;
-        padding: 20px;
-        transition: 0.5s;
-    }
-    .checkbtn{
-        width: 5%; 
-        opacity: 1;
-        cursor: pointer;
-        order: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-    #toggle_menu:checked ~ ul{
-        display: flex;
-    }
-}
-@media screen and (max-width: 425px){
-    .main{
-        width: 100%;
-    }
-}
+
 
