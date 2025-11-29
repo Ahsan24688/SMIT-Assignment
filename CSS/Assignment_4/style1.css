@@ -50,93 +50,98 @@
     #toggle_menu:checked ~ ul{
         display: flex;
     }
-    .imagee{
-        background-image: url(hero_iphone_17_pro__bknyzxfk2agi_small_2x123.jpg);
-    }
-    
-
-    .item2, .item3, .item4, .item5, .item6, .item7 {
+    .image1{
+        background-image: url("./hero_ase25__cop938p8rv6u_small_2x.jpg");
         width: 100%;
-     }
-    .footer_column{
+        background-position: center;
+        text-align: center;
+    }
+    .image2{
+        background-image: url("./hero_iphone_17_pro__bknyzxfk2agi_small_2x123.jpg");
+        width: 100%;
+        background-position: center;
+    }
+    .image3{
+        background-image: url("./hero_iphone_air__0gxyavihpiqu_small.jpg");
+        width: 100%;
+        background-position: center;
+    }
+    .image_box1{
         flex-direction: column;
+        width: 100%;
+    }
+    .image_box2{
+        flex-direction: column;
+        width: 100%;
+    }
+    .image_box3{
+        flex-direction: column;
+        width: 100%;
+    }
+    .image_box2 .imagee3{
+        background-image: url("./promo_ipad_air_avail__6i02t7nujr62_small.jpg");
+    }
+    .footer_Container{
+        width: 100%;
+    }
+    .footer_column {
+    /* Block layout for stacking */
+    display: block; 
+    padding: 10px;
+    max-width: none; 
+    margin: 0;
+}
+.footer-group {
+    width: 100%; 
+}
+    .ft-toggle:checked + label + .footer {
+        display: block!important;
+    }
+    .p_head {
+   width: 100%;
+    cursor: pointer;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 8px 10px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    }
+.p_head .material-symbols-outlined {
+    display: block !important;
+}
+.footer {
+    display: none !important;
+    padding: 5px 0 15px 15px; 
+}
+.sub_items {
+    display: none !important;
+    padding-left: 30px; 
+}
+    .ft-toggle2:checked + label + .sub_items {
+        display: block!important;
+    }
+  .footer li {
+    margin: 2px 0;
+    font-size: 14px;
+    padding: 0;
+}
+
+.ft-toggle, .ft-toggle2 {
+    display: none !important;
+}
+    .f_text{
+        justify-content: center;
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
     }
     .p7{
         flex-direction: column;
-        text-align: center;
-    }
-}
- 
-
-@media screen and (max-width: 425px){
-    .main{
-        width: 100%; 
-    } 
-    .image_container .image,
-    .image_containerr .imagee,
-    .image_container_1 .image_1,
-    .image_container_2 .image_2,
-    .image_container_3 .image_3,
-    .image_container_4 .image_4,
-    .image_container_5 .image_5,
-    .image_container_6 .image_6,
-    .image_container_7 .image_7 {
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        display: block;
-        background-size: cover;
-        background-position: center;
-        height: 500px; 
-    }
-    .item2, .item3, .item4, .item5, .item6, .item7 {
-        width: 100%;
-        margin: 0 auto;
-    }  
-    .image_containerr h1,
-    .image_container_1 h1,
-    .image_container_2 .h12,
-    .image_container_3 .h13,
-    .image_container_4 .h14,
-    .image_container_5 .h15,
-    .image_container_6 .h16,
-    .image_container_7 .h17 {
-        left: 50% !important;
-        top: 10% !important;
-        transform: translateX(-50%);
-        text-align: center;
-        font-size: 20px;
-    }
-    .image_containerr p,
-    .image_container_1 p,
-    .image_container_2 .p2,
-    .image_container_3 .p3,
-    .image_container_4 .p4,
-    .image_container_5 .p5,
-    .image_container_6 .p6,
-    .image_container_7 .p7 {
-        left: 50% !important;
-        top: 20% !important;
-        transform: translateX(-50%);
-        text-align: center;
-        font-size: 14px; 
-    }
-    .image_containerr .btn,
-    .image_container_1 .btn,
-    .image_container_2 .btn2,
-    .image_container_3 .btn3,
-    .image_container_4 .btn4,
-    .image_container_5 .btn5,
-    .image_container_6 .btn6,
-    .image_container_7 .btn7 {
-        top: 38% !important;
-        left: 30% !important;
-        /* transform: translateX(-50%); */
-        font-size: 14px; 
-        /* padding: 6px 12px;  */
-    }
-    .move_image{
-        width: 100%;
-        height: 150px;
+        font-size: 14px;
+        padding: auto;
     }
 }
