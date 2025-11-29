@@ -13,10 +13,19 @@ h1{
 }
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+}
+.head_1{
+    display: flex;
+    justify-content: center;
+}
+.head_2{
+    display: flex;
+    justify-content: center;
 }
 .card{
     display: flex;
@@ -47,3 +56,35 @@ h1{
     background-color: cyan;
     color: black;
 }
+@media screen and (max-width: 768px){
+    /* Container ko column rakho */
+    .container{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 20px 0; */
+        /* min-height: auto; */
+    }
+    h1{
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    .head_1,
+    .head_2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .card{
+        width: 70%;  
+        padding: 15px;
+    }
+    .card img{
+        height: 120px;
+    }
+}
+
