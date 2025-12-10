@@ -54,17 +54,20 @@
         background-image: url("./hero_ase25__cop938p8rv6u_small_2x.jpg");
         width: 100%;
         background-position: center;
+        background-size: cover;
         text-align: center;
     }
     .image2{
         background-image: url("./hero_iphone_17_pro__bknyzxfk2agi_small_2x123.jpg");
         width: 100%;
         background-position: center;
+        background-size: cover;
     }
     .image3{
         background-image: url("./hero_iphone_air__0gxyavihpiqu_small.jpg");
         width: 100%;
         background-position: center;
+        background-size: cover;
     }
     .image_box1{
         flex-direction: column;
@@ -80,6 +83,15 @@
     }
     .image_box2 .imagee3{
         background-image: url("./promo_ipad_air_avail__6i02t7nujr62_small.jpg");
+    }
+    .image_box1 .imagee1 .imagee2 img{
+        object-fit: cover;
+    }
+     .image_box2 .imagee3 .imagee4 img{
+        object-fit: cover;
+    }
+     .image_box3 .imagee5 .imagee6 img{
+        object-fit: cover;
     }
     .footer_Container{
         width: 100%;
@@ -143,5 +155,27 @@
         width: 100%;
         font-size: 14px;
         padding: auto;
+    }
+}
+@media screen and (max-width: 425px){
+    .image_box1 .imagee1 .imagee2 img{
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+    }
+    .image_box2 .imagee3 .imagee4 img{
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+    }
+    .image_box3 .imagee5 .imagee6 img{
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+    }
+    .image1 .image2 .image3{
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
     }
 }
