@@ -16,8 +16,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
     gap: 10px;
     z-index: 10;
 }
@@ -55,7 +55,7 @@ li{
     cursor: pointer;
     order: 1;
     justify-content: flex-start;
-    color: white;
+    color: black;
 }
 .Mega_box{
     /* display: none; */
@@ -64,7 +64,7 @@ li{
     width: 100%;
     top: 54px;
     padding: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     visibility: hidden;
     opacity: 0; 
      transition: all 0.4s ease-in-out;
@@ -79,29 +79,46 @@ nav ul li:hover .Mega_box{
 .content{
     display: flex;
     width: 100%;
-    padding: 25px 40px;
+    padding: 20px 40px;
     justify-content: center;
+    /* background-color: blueviolet; */
 }
 .main{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
     width: 30%;
-    line-height: 35px;
+    
+    /* background-color: aliceblue; */
 }
 .class_links{
     display:block;
-    gap: 10px;
+    gap: 5px;
     list-style-type: none;
+    line-height: 35px;
+    /* background-color: aqua; */
+}
+.subclass_links{
+    display:block;
+    gap: 5px;
+    list-style-type: none;
+    line-height: 25px;
 }
 .class_links li{
     cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 500;
+    /* background-color: aquamarine; */
+}
+.subclass_links{
+    cursor: pointer;
+    font-size: 10px;
 }
 .main p{
-    font-size: 20px;
-    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    /* background-color: brown; */
 }
 .togglemenu{
     display: none;
