@@ -7,8 +7,6 @@
 }
 body{
     min-height: 100vh;
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 nav{
     width: 100%;
@@ -39,12 +37,16 @@ nav ul{
     gap: 20px;
     padding: 10px;
     margin: 0px;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     z-index: 10;
 }
 li{
     cursor: pointer;
     font-size: 14px;
+    color: rgb(56, 51, 51);
+}
+li:hover{
+    color: black;
 }
 .icons{
     width: auto;
@@ -96,7 +98,6 @@ nav ul li:hover .Mega_box{
     gap: 5px;
     list-style-type: none;
     line-height: 35px;
-    /* background-color: aqua; */
 }
 .subclass_links{
     display:block;
@@ -108,17 +109,32 @@ nav ul li:hover .Mega_box{
     cursor: pointer;
     font-size: 25px;
     font-weight: 500;
+    color: rgb(56, 51, 51);
+    transition: 0.2s ease-in-out;
     /* background-color: aquamarine; */
 }
 .subclass_links{
     cursor: pointer;
     font-size: 10px;
+    color: rgb(56, 51, 51);
+    transition: 0.2s ease-in-out;
+}
+.class_links li:hover{
+    color: black;
+}
+.subclass_links li:hover{
+    color: black;
 }
 .main p{
     margin: 0px;
     padding: 0px;
-    font-size: 12px;
+    font-size: 14px;
+    color: rgb(56, 51, 51);
+    transition: 0.2s ease-in-out;
     /* background-color: brown; */
+}
+.main p:hover{
+    color: black;
 }
 .togglemenu{
     display: none;
@@ -361,54 +377,47 @@ marquee .card{
 
 .footer_column {
         display: flex;
-        justify-content: space-between; /* Columns ke beech mein space */
+        justify-content: space-between; 
         flex-wrap: wrap;
         max-width: 1024px;
         margin: 0 auto;
         padding: 20px;
     }
     .footer-group {
-        flex-basis: 19.5%; /* 5 columns ke liye 19.5% width */
+        flex-basis: 19.5%; 
         min-width: 160px; 
         padding-right: 10px;
     }
-    
-    /* Headers: Simple text ki tarah, width auto, koi border nahi */
     .p_head {
-        /* flex-basis yahan se hata diya gaya hai */
         display: block;
         width: auto;
         border-bottom: none; 
-        padding: 8px 8px; /* Padding adjust ki */
+        padding: 8px 8px;
         text-align: left;
         font-weight: bold;
     }
-
-    /* Menu Icons: Laptop/Desktop par chhup jayenge */
     .p_head .material-symbols-outlined {
         display: none !important;
     }
-    
-    /* Menus: Hamesha dikhenge aur padding nahi hogi */
     .footer, .sub_items {
         display: block !important;
         padding: 8px 8px; 
         text-align: left;
         font-weight: 500;
     }
-    
-    
-    /* Toggles ki koi zaroorat nahi */
     .ft-toggle, .ft-toggle2 {
         display: none !important;
     }
-
-    /* List Item styles */
+    
     .footer li {
-        /* background-color: blue; */
         margin: 0 0 2px 0;
         padding: 0;
         list-style-type: none;
+        color: rgb(56, 51, 51);
+        transition: 0.2s ease-in-out;
+    }
+    .footer li:hover{
+        color: black;
     }
         
 

@@ -26,7 +26,9 @@
         
     }
     nav ul{
-        display: none;
+        opacity: 0;
+        /* display: none; */
+        pointer-events: none;
         position: absolute;
         flex-direction: column;
         top: 100%;
@@ -35,20 +37,24 @@
         background-color: rgb(255, 255, 255);
         color: black;
         padding: 20px;
-        transition: 0.5s;
+        transition:  0.4s ease-in-out;
+        
     }
     .checkbtn{
-        width: 5%; 
         opacity: 1;
+        width: 5%; 
         cursor: pointer;
         order: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px;
+        
     }
     #toggle_menu:checked ~ ul{
-        display: flex;
+        /* display: flex; */
+        opacity: 1;
+        pointer-events: auto;
     }
     .image1{
         background-image: url("./hero_ase25__cop938p8rv6u_small_2x.jpg");
@@ -107,7 +113,9 @@
     width: 100%; 
 }
     .ft-toggle:checked + label + .footer {
-        display: block!important;
+        /* display: block!important; */
+        max-height: 500px;
+        opacity: 1;
     }
     .p_head {
    width: 100%;
@@ -123,17 +131,27 @@
     display: block !important;
 }
 .footer {
-    display: none !important;
-    padding: 5px 0 15px 15px; 
+    /* display: none !important; */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 .sub_items {
-    display: none !important;
+    /* display: none !important; */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     padding-left: 30px; 
+    transition: max-height 0.4s ease, opacity 0.3s ease;
 }
-    .ft-toggle2:checked + label + .sub_items {
-        display: block!important;
-    }
-  .footer li {
+.ft-toggle2:checked + label + .sub_items {
+        /* display: block!important; */
+        opacity: 1;
+        max-height: 200px;
+}
+.footer li {
     margin: 2px 0;
     font-size: 14px;
     padding: 0;
@@ -142,20 +160,20 @@
 .ft-toggle, .ft-toggle2 {
     display: none !important;
 }
-    .f_text{
+.f_text{
         justify-content: center;
         width: 100%;
         font-size: 14px;
         padding: 10px;
-    }
-    .p7{
+}
+.p7{
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         font-size: 14px;
         padding: auto;
-    }
+}
 }
 @media screen and (max-width: 425px){
     .image_box1 .imagee1 .imagee2 img{
