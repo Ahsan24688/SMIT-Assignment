@@ -163,6 +163,10 @@
     font-size: 14px;
     padding: 0;
 }
+.footer li:hover{
+    color: white;
+    padding: 1px;
+}
 
 .ft-toggle, .ft-toggle2 {
     display: none !important;
