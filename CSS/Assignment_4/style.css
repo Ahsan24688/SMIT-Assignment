@@ -14,19 +14,16 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF;
     color: black;
-    gap: 10px;
     z-index: 10;
 }
 .img{
-    width: auto;
+    width:  auto;
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
-    gap: 5px;
-    color: white;
-    
+    color: white;   
 }
 nav ul{
     width: auto;
@@ -34,9 +31,8 @@ nav ul{
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    gap: 20px;
-    padding: 10px;
-    margin: 0px;
+    gap: 15px;
+    margin: 2px;
     transition: 0.5s ease-in-out;
     z-index: 10;
 }
@@ -44,6 +40,7 @@ li{
     cursor: pointer;
     font-size: 14px;
     color: rgb(56, 51, 51);
+    padding: 0px 2px;
 }
 li:hover{
     color: black;
@@ -53,7 +50,7 @@ li:hover{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     cursor: pointer;
     order: 1;
     justify-content: flex-start;
@@ -76,22 +73,18 @@ nav ul li:hover .Mega_box{
     opacity: 1;
     top: 54px;
     transition: all 0.3s ease-in-out;
-
 }
 .content{
     display: flex;
     width: 100%;
     padding: 20px 40px;
     justify-content: center;
-    /* background-color: blueviolet; */
 }
 .main{
     display: flex;
     flex-direction: column;
     gap: 2px;
     width: 30%;
-    
-    /* background-color: aliceblue; */
 }
 .class_links{
     display:block;
@@ -111,7 +104,6 @@ nav ul li:hover .Mega_box{
     font-weight: 500;
     color: rgb(56, 51, 51);
     transition: 0.2s ease-in-out;
-    /* background-color: aquamarine; */
 }
 .subclass_links{
     cursor: pointer;
@@ -131,7 +123,6 @@ nav ul li:hover .Mega_box{
     font-size: 14px;
     color: rgb(56, 51, 51);
     transition: 0.2s ease-in-out;
-    /* background-color: brown; */
 }
 .main p:hover{
     color: black;
@@ -145,16 +136,17 @@ nav ul li:hover .Mega_box{
 .image1{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg\ scrn\ imag/hero_ase25__cop938p8rv6u_largetall_2x.jpg");
+    background-image: url("./large screen/1.jpg");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
-    padding: 25px;
+    padding: 80px;
     margin-bottom: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 17px;
 }
@@ -163,14 +155,15 @@ nav ul li:hover .Mega_box{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg scrn imag/hero_iphone_17_pro__bknyzxfk2agi_medium.jpg");
+    background-image: url("./large screen/2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 25px;
     margin-bottom: 5px;
-    color: white;
+    color: rgb(2, 2, 2);
     text-align: center;
     font-size: 17px;
 }
@@ -180,11 +173,12 @@ nav ul li:hover .Mega_box{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg scrn imag/hero_iphone_air__0gxyavihpiqu_medium.jpg");
+    background-image: url("./large screen/3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 25px;
     margin-bottom: 5px;
     color: black;
@@ -203,14 +197,14 @@ nav ul li:hover .Mega_box{
 .imagee1{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg scrn imag/promo_holiday_2025__d5j0zrzqr6mq_medium.jpg");
+    background-image: url("./large screen/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
     margin-bottom: 5px;
     text-align: center;
@@ -221,16 +215,17 @@ nav ul li:hover .Mega_box{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg scrn imag/promo_airpodspro_3__f6xmza7bglei_medium.jpg");
+    background-image: url("./large screen/66.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
     margin-bottom: 5px;
     text-align: center;
     font-size: 17px;
+    color: white;
  }
  .image_box2{
     display: flex;
@@ -246,12 +241,12 @@ nav ul li:hover .Mega_box{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg scrn imag/promo_ipad_air_avail__6i02t7nujr62_large_2x.jpg");
+    background-image: url("./large screen/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
     margin-bottom: 5px;
     text-align: center;
@@ -262,12 +257,12 @@ nav ul li:hover .Mega_box{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url("./lrg scrn imag/promo_apple_watch_series_11__b63hxviqvonm_large.jpg");
+    background-image: url("./large screen/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
     margin-bottom: 5px;
     text-align: center;
@@ -292,7 +287,7 @@ nav ul li:hover .Mega_box{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
     margin-bottom: 5px;
     text-align: center;
@@ -308,7 +303,7 @@ nav ul li:hover .Mega_box{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
     margin-bottom: 5px;
     text-align: center;
@@ -327,9 +322,10 @@ img{
 }
 .carousel{
     margin: 5px;
+    height: auto;
 }
 .carousel-item{
-    padding: 5px;
+    padding: 10px auto ;
 }
 .move_image{
     padding: 5px;
@@ -373,6 +369,12 @@ marquee .card{
     padding: 40px;
     line-height: 20px;
     font-size: 16px;
+    background-color: #1D1D1F;
+}
+.footer_text{
+    color: white;
+    text-align: justify;
+    margin: 0 0 10px 0;
 }
 
 .footer_column {
@@ -395,6 +397,7 @@ marquee .card{
         padding: 8px 8px;
         text-align: left;
         font-weight: bold;
+        color: white;
     }
     .p_head .material-symbols-outlined {
         display: none !important;
@@ -413,10 +416,11 @@ marquee .card{
         margin: 0 0 2px 0;
         padding: 0;
         list-style-type: none;
-        color: rgb(56, 51, 51);
+        color: rgb(255, 255, 255);
         transition: 0.2s ease-in-out;
     }
     .footer li:hover{
+        background-color: white;
         color: black;
     }
         
@@ -428,6 +432,7 @@ marquee .card{
     padding: 5px;
     font-size: 14px;
     text-align: center;
+    color: white;
 }
 .p7{
     width: 100%;
@@ -435,6 +440,7 @@ marquee .card{
     justify-content: space-between; 
     flex-wrap: wrap;
     text-align: center;
+    color: white;
 }
 
 

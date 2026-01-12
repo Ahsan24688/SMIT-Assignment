@@ -64,20 +64,25 @@
         pointer-events: auto;
     }
     .image1{
-        background-image: url("./hero_ase25__cop938p8rv6u_small_2x.jpg");
+        background-image: url("./Smll Scren/hero_apple_watch_ny__c8f1tzaoa72a_small.jpg");
+        justify-content: flex-start;
+        color: black;
         width: 100%;
+        height: 100vh;
         background-position: center;
         background-size: cover;
         text-align: center;
+        font-size: 17px;
+        padding-top: 80px;
     }
     .image2{
-        background-image: url("./hero_iphone_17_pro__bknyzxfk2agi_small_2x123.jpg");
+        background-image: url("./Smll Scren/2.jpg");
         width: 100%;
         background-position: center;
         background-size: cover;
     }
     .image3{
-        background-image: url("./hero_iphone_air__0gxyavihpiqu_small.jpg");
+        background-image: url("./Smll Scren/3.jpg");
         width: 100%;
         background-position: center;
         background-size: cover;
@@ -94,16 +99,33 @@
         flex-direction: column;
         width: 100%;
     }
-    .image_box2 .imagee3{
-        background-image: url("./promo_ipad_air_avail__6i02t7nujr62_small.jpg");
-    }
-    .image_box1 .imagee1 .imagee2 img{
+    .image_box1 .imagee1{
+        background-image: url("./Smll Scren/5.jpg");
+        background-size: cover;
+        background-position: center;
         object-fit: cover;
     }
-     .image_box2 .imagee3 .imagee4 img{
+    .image_box1 .imagee2{
+        background-image: url("./Smll Scren/7.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+     .image_box2 .imagee3{
+        background-image: url("./Smll Scren/6.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+    .image_box2 .imagee4{
+        background-image: url("./Smll Scren/4.jpg");
+        background-size: cover;
+        background-position: center;
         object-fit: cover;
     }
      .image_box3 .imagee5 .imagee6 img{
+        background-size: cover;
+        background-position: center;
         object-fit: cover;
     }
     .footer_Container{
@@ -123,6 +145,7 @@
         /* display: block!important; */
         max-height: 500px;
         opacity: 1;
+        color: white;
     }
     .p_head {
    width: 100%;
@@ -162,10 +185,6 @@
     margin: 2px 0;
     font-size: 14px;
     padding: 0;
-}
-.footer li:hover{
-    color: white;
-    padding: 1px;
 }
 
 .ft-toggle, .ft-toggle2 {
