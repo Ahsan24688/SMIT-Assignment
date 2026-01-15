@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #4C6DD1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white; 
+    font-family: "Quicksand", sans-serif;
+}
+.container_box{
+    max-width: 250px;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+#input{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    padding-inline: 10px;
+    height: 50px;
+    
+}
+#output{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+.btn{
+    background-color: #2F2F2F;
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+.btnn{
+    background-color: #5B5B5B;
+}
+.btn2{
+    background-color: #FF9200;
+}
+.div17 {
+    grid-column: span 2 / span 2;
+    border-radius: 50px;
+}
+
+.div18 {
+    grid-column-start: 3;
+}
+
+.div19 {
+    grid-column-start: 4;
+}
+
+        
