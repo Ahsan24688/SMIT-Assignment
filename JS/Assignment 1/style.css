@@ -15,12 +15,29 @@ body{
     font-family: "Quicksand", sans-serif;
 }
 .container_box{
-    max-width: 250px;
+    max-width: 270px;
     width: 100%;
     background-color: black;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 35px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.icon1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon1 .material-symbols-outlined{
+    font-size: 18px;
+}
+.icon1 p{
+    font-weight: 600;
+}
+.icon2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
 #input{
@@ -29,7 +46,7 @@ body{
     align-items: center;
     font-size: 20px;
     padding-inline: 10px;
-    height: 50px;
+    height: 70px;
     
 }
 #output{
@@ -38,10 +55,10 @@ body{
     align-items: center;
     font-size: 40px;
     margin-bottom: 10px;
-    height: 60px;
+    height: 80px;
 }
 
-.parent {
+.btns_func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -57,6 +74,11 @@ body{
     align-items: center;
     font-weight: 600;
     font-size: 24px;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: rgb(197, 184, 184);
+    color: black;
 }
 .btnn{
     background-color: #5B5B5B;
