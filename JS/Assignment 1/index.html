@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="1.webp">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=backspace" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=backspace" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
     <title> Calculator </title>
 </head>
 
@@ -15,19 +17,20 @@
     <div class="container_box">
         <div id="gui">
             <div class="icon1">
-                <p> Sat 6:24 pm </p>
+                <p id="time"></p>
                 <div>
-                <span class="material-symbols-outlined">android_cell_4_bar</span>
-                <span class="material-symbols-outlined">wifi</span>
-                <span class="material-symbols-outlined">battery_android_frame_4</span>
+                    <span class="material-symbols-outlined">android_cell_4_bar</span>
+                    <span class="material-symbols-outlined">wifi</span>
+                    <span class="material-symbols-outlined">battery_android_frame_4</span>
                 </div>
             </div>
             <div class="icon2">
-                <span class="material-symbols-outlined">menu</span>
+                <span class="material-symbols-outlined" onClick="toseemyhistory()">menu</span>
                 <span class="material-symbols-outlined">function</span>
             </div>
-            <p id="input"></p>
-            <p id="output"></p>
+            <div id="input"></div>
+            <div id="output"></div>
+            <div id="historyDiv"> See History </div>
         </div>
 
 
