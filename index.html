@@ -3,65 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SMIT Assignment  </title>
+    <title>SMIT Assignments</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <h1> SMIT Assignments </h1>
-    <h1> HTML </h1>
-    <div class="container">
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">SMIT<span class="accent">.</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#html">HTML</a>
+                <a href="#css">CSS</a>
+                <a href="#js">JavaScript</a>
+            </nav>
+        </div>
+    </header>
 
-    
-    <div class="head_1">
-    <div class="card" data-aos="zoom-in-up">
-        <a href="./HTML/Assignment_1/index.html" target="_blank"> 
-            <img src="1.png" width="100%" height="150px">
-            <button class="btn"> HTML Assignment </button>
-        </a>
-    </div>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="wrap hero-inner">
+                <h1 class="hero-title">Browse student assignments and small projects</h1>
+                <p class="hero-sub">Clean, responsive demos and small projects built while learning web development.</p>
+                <div class="hero-cta">
+                    <a class="btn primary" href="#html">Explore Assignments</a>
+                </div>
+            </div>
+        </section>
 
-    <h1> CSS </h1>
-    <div class="head_2">   
-    <div class="card" data-aos="zoom-in-up">
-        <a href="./CSS/Assignment/index.html" target="_blank"> 
-            <img src="2.png" width="100%" height="150px">
-            <button class="btn"> Google template </button>
-        </a>
-    </div>
-    <div class="card" data-aos="zoom-in-up">
-        <a href="./CSS/Assignment_2/index.html" target="_blank"> 
-            <img src="3.png" width="100%" height="150px">
-            <button class="btn"> Web Page Layout</button>
-        </a>
-    </div>
-    <div class="card" data-aos="zoom-in-up">
-        <a href="./CSS/Assignment_3/index.html" target="_blank"> 
-            <img src="4.png" width="100%" height="150px">
-            <button class="btn"> color Palette </button>
-        </a>
-    </div>
-    <div class="card" data-aos="zoom-in-up">
-        <a href="./CSS/Assignment_4/index.html" target="_blank"> 
-            <img src="5.png" width="100%" height="150px">
-            <button class="btn"> Apple Page </button>
-        </a>
-    </div>
-    </div>
-        <h1> JAVASCRIPT </h1>
-    <div class="head_2">   
-    <div class="card" data-aos="zoom-in-up">
-        <a href="./JS/Assignment 1/index.html" target="_blank"> 
-            <img src="6.png" width="100%" height="150px">
-            <button class="btn"> Calculator </button>
-        </a>
-    </div>
-    </div>
+        <section id="html" class="section wrap">
+            <h2 class="section-title">HTML</h2>
+            <div class="grid">
+                <article class="card" data-aos="fade-up">
+                    <a class="card-link" href="./HTML/Assignment_1/index.html" target="_blank" aria-label="Open HTML Assignment">
+                        <img src="1.png" alt="HTML assignment preview" class="card-image">
+                        <div class="card-body">
+                            <h3>HTML Assignment</h3>
+                            <p class="muted">Foundational HTML project</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="css" class="section wrap">
+            <h2 class="section-title">CSS</h2>
+            <div class="grid">
+                <article class="card" data-aos="fade-up">
+                    <a class="card-link" href="./CSS/Assignment/index.html" target="_blank">
+                        <img src="2.png" alt="Google template preview" class="card-image">
+                        <div class="card-body">
+                            <h3>Google template</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="card" data-aos="fade-up">
+                    <a class="card-link" href="./CSS/Assignment_2/index.html" target="_blank">
+                        <img src="3.png" alt="Web page layout preview" class="card-image">
+                        <div class="card-body">
+                            <h3>Web Page Layout</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="card" data-aos="fade-up">
+                    <a class="card-link" href="./CSS/Assignment_3/index.html" target="_blank">
+                        <img src="4.png" alt="Color palette preview" class="card-image">
+                        <div class="card-body">
+                            <h3>Color Palette</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="card" data-aos="fade-up">
+                    <a class="card-link" href="./CSS/Assignment_4/index.html" target="_blank">
+                        <img src="5.png" alt="Apple page preview" class="card-image">
+                        <div class="card-body">
+                            <h3>Apple Page</h3>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="js" class="section wrap">
+            <h2 class="section-title">JavaScript</h2>
+            <div class="grid">
+                <article class="card" data-aos="fade-up">
+                    <a class="card-link" href="./JS/Assignment 1/index.html" target="_blank">
+                        <img src="6.png" alt="Calculator preview" class="card-image">
+                        <div class="card-body">
+                            <h3>Calculator</h3>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p class="muted">© <span id="year"></span> SMIT Assignments — Built for learning and demonstration.</p>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-  AOS.init();
-</script>
+        AOS.init({ duration: 600, once: true });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
