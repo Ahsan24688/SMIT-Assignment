@@ -18,7 +18,7 @@ body{
     max-width: 270px;
     width: 100%;
     background-color: black;
-    padding: 10px;
+    padding: 16px;
     border-radius: 35px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
@@ -46,7 +46,7 @@ body{
     align-items: center;
     font-size: 20px;
     padding-inline: 10px;
-    height: 70px;
+    height: 30px;
 }
 #output{
     display: flex;
@@ -54,7 +54,7 @@ body{
     align-items: center;
     font-size: 40px;
     margin-bottom: 10px;
-    height: 80px;
+    height: 60px;
 }
 .main_btn{
     display: flex;
