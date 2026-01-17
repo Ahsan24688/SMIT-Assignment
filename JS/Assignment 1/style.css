@@ -117,27 +117,5 @@ body{
 .div19 {
     grid-column-start: 4;
 }
-.container_box.dark {
-    background-color: #222;   /* dark background */
-    color: white;              /* text color */
-}
-
-/* Buttons dark mode */
-.container_box.dark .btn {
-    background-color: #444;    /* button dark */
-    color: white;              /* button text white */
-}
-
-/* Button hover effect in dark mode */
-.container_box.dark .btn:hover {
-    background-color: #666;
-    color: white;
-}
-
-/* Input and output text in dark mode */
-.container_box.dark #input,
-.container_box.dark #output {
-    color: white;
-}
 
         
