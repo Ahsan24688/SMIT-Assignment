@@ -49,3 +49,7 @@ function toseemyhistory() {
         }
     }
 }
+function clearhistory() {
+    myhistory = [];
+    toseemyhistory();
+}

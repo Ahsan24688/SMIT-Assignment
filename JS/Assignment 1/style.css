@@ -56,12 +56,26 @@ body{
     margin-bottom: 10px;
     height: 80px;
 }
-#historyDiv{
-    margin:10px;
+.main_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+}
+.main_btn > button{
     background-color: #444; 
     color:white;
     border-radius: 7px;
-    padding: 5px;
+    padding: 10px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.main_btn > button:hover{
+    background-color: rgb(197, 184, 184);
+    color: black;
 }
 .btns_func {
     display: grid;
