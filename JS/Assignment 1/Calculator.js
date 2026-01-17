@@ -31,7 +31,7 @@ function calculator() {
 function showtime() {
     var time = new Date();
     var presenttime = document.getElementById("time");
-    var newtime = presenttime.innerText = time.toLocaleTimeString();
+    var newtime = presenttime.innerText = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     return newtime;
 }
 showtime();
