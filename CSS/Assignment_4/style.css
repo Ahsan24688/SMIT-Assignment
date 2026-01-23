@@ -131,7 +131,7 @@ nav ul li:hover .Mega_box{
     display: none;
 }
 .checkbtn{
-    opacity: 0;
+    display: none;
 }
 .image1{
     display: flex;
