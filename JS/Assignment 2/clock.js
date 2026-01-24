@@ -71,10 +71,17 @@ setInterval(digitalClock, 1000);
 
 function currentDate(){
     var date = new Date();
+    var dayname = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var monthname = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var day = date.getDate();
-    var month = date.getMonth() + 1;
+    var daynames = dayname[date.getDay()];
+    var monthnames = monthname[date.getMonth()];
     var year = date.getFullYear();
-    var fulldate = day + "/" + month + "/" + year;
+   
+
+    var fulldate = daynames + "  " + day + "  " + monthnames + "  " + year;
     document.getElementById("date").innerText = fulldate;
+    
+
 }
 currentDate();

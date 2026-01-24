@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./2.jpg">
     <title>Digital Clock</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="clockframe">
+        <h1>Digital Clock</h1>
+        <div id="greet"></div>
         <div class="clockbox">
-            <div id="greet"></div>
             <span id="gethour"></span> :
             <span id="getminute"></span> :
             <span id="getsecnd"></span>
             <span id="timeperiod"></span>
-            <div id="date"></div>
+        </div>
+        <div>
+            <span id="date"></span>
         </div>
     </div>
     <script src="clock.js"></script>
