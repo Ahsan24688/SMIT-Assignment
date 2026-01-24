@@ -48,16 +48,16 @@ function digitalClock(){
     }
 
     if(timeperiod === "AM"){
-        greet = "Good Morning";
+        greet = "Good Morning! 🌞";
     }
     if(timeperiod === "PM" && hour >= 1 && hour <= 4){
-        greet = "Good Afternoon";
+        greet = "Good Afternoon! ☀️";
     }
     if(timeperiod === "PM" && hour >= 5 && hour <= 8){
-        greet = "Good Evening";
+        greet = "Good Evening! 🌇";
     }
     if(timeperiod === "PM" && hour >= 9 && hour <= 11){
-        greet = "Good Night";
+        greet = "Good Night! 🌙";
     }    
 
     hourdisplay.innerText = hour;
