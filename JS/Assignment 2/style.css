@@ -1,72 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-body{
-    background-color: brown;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(212, 147, 6);
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     height: 100vh;
 }
-.clockframe{
+
+.clockframe {
     background-image: url("./1.webp");
     background-position: fixed;
     background-size: cover;
     font-family: "Google Sans Flex", sans-serif;
-    /* background-color: white;
-    border: 1px solid black; */
+    gap: 30px;
     border-radius: 40px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* width: 500px;
-    height: 500px; */
+    width: 100%;
+    max-width: 600px;
     padding: 20px;
     font-size: 25px;
     color: rgb(0, 0, 0);
 }
-.clockbox{
-    font-family: 'Orbitron', sans-serif;
+
+.clockbox {
     font-size: 50px;
-    background-color: rgba(142, 235, 235, 0.5);
+    background-color: rgba(202, 242, 242, 0.5);
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    width: 450px;
-    
+    width: 100%;
+
 }
-#greet{
+
+#greet {
     font-size: 30px;
     margin-bottom: 20px;
 }
-#date{
+
+#date {
     color: white;
     font-size: 30px;
     margin-top: 30px;
     padding: 5px;
 }
 @media screen and (max-width: 768px) {
-    .clockframe{
+    .clockframe {
         width: auto;
-        height: auto;
         background-position: fixed;
         background-size: cover;
+        gap: 16px;
     }
-    .clockbox{
+
+    .clockbox {
         width: 100%;
         font-size: 30px;
         padding: 5px;
     }
-    h1{
+
+    h1 {
         text-align: center;
         font-size: 25px;
     }
-    #greet{
+
+    #greet {
         font-weight: 600;
         font-size: 20px;
     }
-    #date{
+
+    #date {
         font-weight: 600;
         font-size: 20px;
     }
