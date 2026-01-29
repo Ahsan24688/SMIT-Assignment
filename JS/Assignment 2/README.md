@@ -1,2 +1,2 @@
-# Calculator
-[Page_Link](file:///D:/SMIT%20Course/SMIT-Assignment/JS/Assignment%202/index.html)
+# Clock
+[Page_Link](https://ahsan24688.github.io/SMIT-Assignment/JS/Assignment%202/index.html)
