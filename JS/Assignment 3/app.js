@@ -5,19 +5,16 @@ var guessdiv = document.getElementById("guesscolor");
 var span = document.getElementById("score_span");
 var head = document.getElementById("head");
 
-
-
-
 // guesingdiv style
-guesingdiv.style.top = "0";          
+guesingdiv.style.top = "0";
 guesingdiv.style.width = "100%";
-guesingdiv.style.height = "120px";   
+guesingdiv.style.height = "120px";
 guesingdiv.style.display = "flex";
 guesingdiv.style.justifyContent = "space-around";
 guesingdiv.style.alignItems = "center";
 guesingdiv.style.gap = "20px";
 guesingdiv.style.marginBottom = "10px";
-guesingdiv.style.padding = "10px"; 
+guesingdiv.style.padding = "10px";
 guesingdiv.style.position = "fixed";
 guesingdiv.style.backgroundColor = "lightblue";
 
@@ -36,20 +33,30 @@ function bgcolor() {
     var randomcolor = Math.floor(Math.random() * bodycolor.length);
     return bodycolor[randomcolor];
 }
+
+var ahsan2 = bgcolor();
 // guessdiv style
 guessdiv.style.width = "100px";
 guessdiv.style.height = "100px";
 guessdiv.style.margin = "5px";
 guessdiv.style.border = "2px solid black";
 guessdiv.style.borderRadius = "10px";
-guessdiv.style.backgroundColor = bgcolor();
+guessdiv.style.backgroundColor = ahsan2;
+guessdiv.innerText = ahsan2;
+guessdiv.style.display = "flex";
+guessdiv.style.justifyContent = "center";
+guessdiv.style.alignItems = "center";
+guessdiv.style.color = "white";
+guessdiv.style.fontSize = "20px";
 
 // span style
 span.style.fontSize = "30px";
 span.style.color = "black";
 
-
 for (var i = 0; i < 21; i++) {
+
+    var ahsan = bgcolor();
+
     var submaindiv2 = document.createElement("div");
     submaindiv2.innerHTML = "Hello World"
     submaindiv2.style.color = "white"
@@ -64,21 +71,26 @@ for (var i = 0; i < 21; i++) {
     submaindiv2.style.display = "flex"
     submaindiv2.style.justifyContent = "center"
     submaindiv2.style.alignItems = "center"
-    submaindiv2.style.backgroundColor = bgcolor();
+    submaindiv2.style.backgroundColor = ahsan;
+    submaindiv2.innerText = ahsan;
     maindiv.appendChild(submaindiv2);
 }
 
 var score = 0;
 var attemptsCounter = 0;
-var Gameschedule = true;
+var Gameschedule = "New Game";
 
 maindiv.addEventListener("click", function (event) {
 
-    if (!Gameschedule){
+    if (Gameschedule == "Game Completed") {
         alert("Game Completed! Please Refresh The Page To Play Again");
         return;
     }
-        
+    else if (Gameschedule == "Game Over") {
+        alert("Game Over! Please Refresh The Page To Play Again");
+        return;
+    }
+
 
     if (event.target.style.backgroundColor === guessdiv.style.backgroundColor) {
         score++;
@@ -86,7 +98,7 @@ maindiv.addEventListener("click", function (event) {
 
         if (attemptsCounter === 5) {
             span.innerHTML = "Congrats You Got It! <br> Your score: " + score;
-            Gameschedule = false;
+            Gameschedule = "Game Completed";
             return;
         }
         else {
@@ -105,7 +117,7 @@ maindiv.addEventListener("click", function (event) {
         }
         else {
             span.innerHTML = "Game Over! <br> Your score is:" + score;
-            Gameschedule = false;
+            Gameschedule = "Game Over";
             return;
         }
     }
