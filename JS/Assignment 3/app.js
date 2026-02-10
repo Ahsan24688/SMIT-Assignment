@@ -113,7 +113,7 @@ maindiv.addEventListener("click", function (event) {
             span.innerHTML = "You have Missed the Color <br> Your score is:" + score;
         }
         else if (score == 1) {
-            span.innerHTML = "You Have Only 1 Chance: <br>" + score;
+            span.innerHTML = "You Have Only 1 Chance: <br> Your Score is:" + score;
         }
         else {
             span.innerHTML = "Game Over! <br> Your score is:" + score;
