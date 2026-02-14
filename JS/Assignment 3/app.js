@@ -34,15 +34,15 @@ function bgcolor() {
     return bodycolor[randomcolor];
 }
 
-var ahsan2 = bgcolor();
+var randomcolor = bgcolor();
 // guessdiv style
 guessdiv.style.width = "100px";
 guessdiv.style.height = "100px";
 guessdiv.style.margin = "5px";
 guessdiv.style.border = "2px solid black";
 guessdiv.style.borderRadius = "10px";
-guessdiv.style.backgroundColor = ahsan2;
-guessdiv.innerText = ahsan2;
+guessdiv.style.backgroundColor = randomcolor;
+guessdiv.innerText = randomcolor;
 guessdiv.style.display = "flex";
 guessdiv.style.justifyContent = "center";
 guessdiv.style.alignItems = "center";
@@ -55,7 +55,7 @@ span.style.color = "black";
 
 for (var i = 0; i < 21; i++) {
 
-    var ahsan = bgcolor();
+    var newrandomcolor = bgcolor();
 
     var submaindiv2 = document.createElement("div");
     submaindiv2.innerHTML = "Hello World"
@@ -71,9 +71,14 @@ for (var i = 0; i < 21; i++) {
     submaindiv2.style.display = "flex"
     submaindiv2.style.justifyContent = "center"
     submaindiv2.style.alignItems = "center"
-    submaindiv2.style.backgroundColor = ahsan;
-    submaindiv2.innerText = ahsan;
+    submaindiv2.style.backgroundColor = newrandomcolor;
+    submaindiv2.innerText = newrandomcolor;
     maindiv.appendChild(submaindiv2);
+}
+
+function refreshPage() {
+    window.location.reload();
+    
 }
 
 var score = 0;
@@ -84,10 +89,12 @@ maindiv.addEventListener("click", function (event) {
 
     if (Gameschedule == "Game Completed") {
         alert("Game Completed! Please Refresh The Page To Play Again");
+        setTimeout(refreshPage, 1000);
         return;
     }
     else if (Gameschedule == "Game Over") {
         alert("Game Over! Please Refresh The Page To Play Again");
+        setTimeout(refreshPage, 1000);
         return;
     }
 
@@ -102,8 +109,12 @@ maindiv.addEventListener("click", function (event) {
             return;
         }
         else {
-            guessdiv.style.backgroundColor = bgcolor();
-            event.target.style.backgroundColor = bgcolor();
+            var newcolor = bgcolor();
+            var color = bgcolor();
+            guessdiv.style.backgroundColor = color;
+            guessdiv.innerText = color;
+            event.target.style.backgroundColor = newcolor;
+            event.target.innerText = newcolor;
             span.innerHTML = "Correct! <br> Your score is:" + score;
         }
     }
