@@ -1,4 +1,4 @@
-var bodycolor = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black"];
+var bodycolor = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "cyan", "magenta", "lime", "maroon", "navy", "olive", "teal", "violet", "indigo", "gold", "silver", "aqua"];
 var maindiv = document.getElementById("main");
 var guesingdiv = document.getElementById("guesing_color");
 var guessdiv = document.getElementById("guesscolor");
@@ -13,10 +13,12 @@ guesingdiv.style.display = "flex";
 guesingdiv.style.justifyContent = "space-around";
 guesingdiv.style.alignItems = "center";
 guesingdiv.style.gap = "20px";
-guesingdiv.style.marginBottom = "10px";
+guesingdiv.style.margin = "0px 10px 20px 0px";
 guesingdiv.style.padding = "10px";
 guesingdiv.style.position = "fixed";
-guesingdiv.style.backgroundColor = "lightblue";
+guesingdiv.style.backgroundColor = "#52b788";
+guesingdiv.style.borderRadius = "20px";
+guesingdiv.style.zIndex = "10";
 
 // maindiv style
 maindiv.style.display = "flex";
@@ -25,6 +27,9 @@ maindiv.style.justifyContent = "center";
 maindiv.style.alignItems = "center";
 maindiv.style.gap = "20px";
 maindiv.style.marginTop = "180px";
+maindiv.style.backgroundColor = "#29e645";
+maindiv.style.borderRadius = "20px";
+
 
 
 
@@ -39,15 +44,17 @@ var randomcolor = bgcolor();
 guessdiv.style.width = "100px";
 guessdiv.style.height = "100px";
 guessdiv.style.margin = "5px";
-guessdiv.style.border = "2px solid black";
+guessdiv.style.border = "1px solid black";
 guessdiv.style.borderRadius = "10px";
 guessdiv.style.backgroundColor = randomcolor;
 guessdiv.innerText = randomcolor;
 guessdiv.style.display = "flex";
 guessdiv.style.justifyContent = "center";
 guessdiv.style.alignItems = "center";
-guessdiv.style.color = "white";
+guessdiv.style.color = "black";
 guessdiv.style.fontSize = "20px";
+guessdiv.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)"
+
 
 // span style
 span.style.fontSize = "30px";
@@ -59,18 +66,21 @@ for (var i = 0; i < 21; i++) {
 
     var submaindiv2 = document.createElement("div");
     submaindiv2.innerHTML = "Hello World"
-    submaindiv2.style.color = "white"
+    submaindiv2.style.color = "black"
     submaindiv2.style.fontSize = "30px"
     submaindiv2.style.textAlign = "center"
     submaindiv2.style.marginTop = "10px"
     submaindiv2.style.padding = "20px"
-    submaindiv2.style.border = "2px solid black"
+    submaindiv2.style.border = "1px solid black"
     submaindiv2.style.borderRadius = "10px"
     submaindiv2.style.width = "200px"
     submaindiv2.style.height = "200px"
     submaindiv2.style.display = "flex"
     submaindiv2.style.justifyContent = "center"
     submaindiv2.style.alignItems = "center"
+    submaindiv2.style.cursor = "pointer"
+    // submaindiv2.style.transition = "all 0.3s ease"
+    submaindiv2.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.9)"
     submaindiv2.style.backgroundColor = newrandomcolor;
     submaindiv2.innerText = newrandomcolor;
     maindiv.appendChild(submaindiv2);
@@ -89,12 +99,14 @@ maindiv.addEventListener("click", function (event) {
 
     if (Gameschedule == "Game Completed") {
         alert("Game Completed! Please Refresh The Page To Play Again");
-        setTimeout(refreshPage, 1000);
+        // setTimeout(refreshPage, 1000);
+        refreshPage();
         return;
     }
     else if (Gameschedule == "Game Over") {
         alert("Game Over! Please Refresh The Page To Play Again");
-        setTimeout(refreshPage, 1000);
+        // setTimeout(refreshPage, 1000);
+        refreshPage();
         return;
     }
 
