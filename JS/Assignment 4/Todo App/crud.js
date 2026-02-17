@@ -23,7 +23,7 @@ function add() {
                 <td> ${getcity} </td>
                 <td> ${contact} </td>
                 </tr>`;
-    tablebody.tr.td.style.padding = "10px";            
+    // tablebody.tr.td.style.padding = "10px";            
     pushdata.innerHTML += tablebody;
     if(getid == getid && getname == getname && getage == getage && getcity == getcity && contact == contact){
         document.getElementById("id").value = "";
