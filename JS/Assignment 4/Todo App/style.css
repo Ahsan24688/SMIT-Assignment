@@ -50,13 +50,32 @@ table{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+thead{
+    background-color: #dbabab;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 #table_body{
     margin: 50px;
     padding: 20px;
     background-color: aquamarine;
     border-radius: 10px;
+    gap: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 tbody tr{
     border-bottom: 1px solid #000000;
+}
+.action_btn{
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    
 }
