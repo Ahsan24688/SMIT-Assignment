@@ -2,8 +2,13 @@ body{
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #input_box{
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +16,13 @@ body{
     padding: 5px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+#input_box:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+
 }
 #input_box input{
     width: 300px;
@@ -19,7 +30,12 @@ body{
     margin: 10px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+#input_box input:hover{
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
 }
 #input_box button{
     width: 100px;
@@ -44,26 +60,51 @@ table{
     margin: 5px;
 }
 #display{
+    width: 80%;
     margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-thead{
-    background-color: #dbabab;
-    color: black;
     padding: 10px;
+    background-color: #25d861;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
 }
-#table_body{
-    margin: 50px;
-    padding: 20px;
-    background-color: aquamarine;
-    border-radius: 10px;
-    gap: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#display:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0; 
+    margin: 5px;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white; 
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
+
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+
+tbody td {
+    padding: 10px;
+    background-color: #00ffaa; 
+    
 }
 tbody tr{
     border-bottom: 1px solid #000000;
@@ -78,4 +119,75 @@ tbody tr{
     font-size: 14px;
     cursor: pointer;
     
+}
+/* Mobile Screens (Max width 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Input box ko mobile par full width karein */
+    #input_box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #input_box input {
+        width: 80%;
+    }
+
+    /* Table ko responsive banane ka logic */
+    #display {
+        width: 95%;
+        padding: 5px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block; /* Table layout ko block mein badal dena */
+    }
+
+    /* Header ko hide kar dein mobile par kyunki cards mein labels use karenge */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 2px solid #4CAF50;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #00ffaa;
+    }
+
+    td {
+        /* Mobile par cells ko side-by-side ki jagah upar-niche dikhana */
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        position: relative;
+        padding-left: 50% !important; /* Label ke liye jagah */
+        text-align: right !important;
+    }
+
+    /* Har cell ke pehle uska label lagane ke liye (Desktop headers ki jagah) */
+    td:before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Labels define karein (Apne headers ke hisab se) */
+    td:nth-of-type(1):before { content: "ID"; }
+    td:nth-of-type(2):before { content: "Name"; }
+    td:nth-of-type(3):before { content: "Age"; }
+    td:nth-of-type(4):before { content: "Actions"; }
+    td:nth-of-type(5):before { content: "Created At"; }
+    
+    .action_btn {
+        width: 40%; /* Buttons mobile par thode bade hon */
+        margin: 2px;
+    }
 }
