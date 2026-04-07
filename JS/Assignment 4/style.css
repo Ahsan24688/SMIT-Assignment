@@ -153,4 +153,36 @@ tbody tr{
     cursor: pointer;
     
 }
+@media screen and (max-width: 600px){
+    #input_box{
+        width: 90%;
+    }
+    #input_box input, #input_box select{
+        width: 100%;
+    }
+    #display{
+        width: 90%;
+    }
+    #delete_all{
+        align-self: center;
+    }
+    table{
+        display: flex;
+        overflow-x: auto;
+
+    }
+    thead, tr, tbody{
+        display: flex;
+    }
+    th, td {
+        display: block;
+        padding: 10px;
+        height: 50px;
+    }
+    tr {
+        display: flex;
+        flex-direction: column; 
+    }
+    
+}
 
