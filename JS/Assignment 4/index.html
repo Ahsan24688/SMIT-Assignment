@@ -9,29 +9,36 @@
 </head>
 <body>
     <div id="input_box">
-        <!-- <input type="number" id="id" placeholder="Enter Your ID"> -->
+        <h1> User mangement (Crud) </h1>
         <input type="text" id="name" placeholder="Enter Your Name">
         <input type="number" id="age" placeholder="Enter Your age">
         <input type="text" id="city" placeholder="Enter Your City">
-        <!-- <input type="number" id="contact" placeholder="Enter Your Contact"> -->
+        <select id="status">
+            <option value="Pending" selected>Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
         <button id="submit" onclick="add()">Submit</button>
-        <button id="update" onclick="updateuser()">Update</button>
+        <button id="update" onclick="updateuser()" disabled >Update</button>
     </div>
     <div id="display">
         <table>
+            <h1> Users List </h1>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Age</th>
+                    <th>City</th>
                     <th>Actions</th>
                     <th>Created At</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody id="table_body">
 
-            </tbody>    
+            </tbody> 
         </table>
+        <button id="delete_all" onclick="deleteall()">Delete All</button>
     </div>
 </body>
 </html>
