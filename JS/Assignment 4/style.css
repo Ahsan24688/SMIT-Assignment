@@ -166,7 +166,7 @@ tbody tr:hover{
     color: #2e7d32;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
