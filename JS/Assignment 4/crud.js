@@ -6,7 +6,14 @@ function refreshdata(){
     var pushdata = document.getElementById("table_body");
     pushdata.innerHTML = "";
     for (var i = 0; i < Usersdata.length; i++) {
-    pushdata.innerHTML += `<tr>
+        var table_color = "";
+        if (Usersdata[i].status == "Pending") {
+         table_color = "red";
+    }
+    else{
+         table_color = "green";
+    }
+    pushdata.innerHTML += `<tr class="${table_color}">
                 <td> ${Usersdata[i].id} </td>
                 <td> ${Usersdata[i].username} </td>
                 <td> ${Usersdata[i].userage} </td>
@@ -19,6 +26,8 @@ function refreshdata(){
                 <td> ${Usersdata[i].status} </td>
                 </tr>`;
     }
+
+    
 }
 function add() {
 

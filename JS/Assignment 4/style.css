@@ -78,6 +78,7 @@ h1{
     background-color: #cd2121;
     color: white;
     font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 #delete_all:hover{
@@ -136,7 +137,7 @@ thead th:last-child {
 
 tbody td {
     padding: 10px;
-    background-color: #00ffaa; 
+    /* background-color: #00ffaa;  */
     
 }
 tbody tr{
@@ -152,6 +153,14 @@ tbody tr{
     font-size: 14px;
     cursor: pointer;
     
+}
+.red td{
+    background-color: #ff0000;
+    color : #ffffff;
+}
+.green td{
+    background-color: #00ff00;
+    color : #000000;
 }
 @media screen and (max-width: 600px){
     #input_box{
