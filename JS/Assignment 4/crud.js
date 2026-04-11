@@ -2,6 +2,14 @@
 var Usersdata = [];
 var CurrentID = null;
 
+function getdata() {
+    var tododata = window.localStorage.getItem("Usersdata");
+    if (tododata) {
+        Usersdata = JSON.parse(tododata);
+    }
+    refreshdata();
+}
+getdata();
 function refreshdata(){
     var pushdata = document.getElementById("table_body");
     pushdata.innerHTML = "";
@@ -50,6 +58,7 @@ function add() {
         return;
     }
     Usersdata.push(userinput);
+    window.localStorage.setItem("Usersdata", JSON.stringify(Usersdata));
     refreshdata();
     clearall();
     
@@ -71,6 +80,7 @@ function deleteuser(id){
             break;
         }
     }
+    window.localStorage.setItem("Usersdata", JSON.stringify(Usersdata));
     refreshdata();
     
 }
@@ -108,6 +118,7 @@ function updateuser(id){
             break;
         }
 }
+    window.localStorage.setItem("Usersdata", JSON.stringify(Usersdata));
     refreshdata();
     clearall();
     CurrentID = null;
@@ -119,5 +130,6 @@ function updateuser(id){
 
 function deleteall(){
     Usersdata = [];
+    window.localStorage.removeItem("Usersdata");
     refreshdata();
 }

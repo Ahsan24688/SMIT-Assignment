@@ -176,21 +176,21 @@ tbody tr{
         align-self: center;
     }
     table{
-        display: flex;
+        /* display: flex; */
         overflow-x: auto;
 
     }
-    thead, tr, tbody{
+    /* thead, tr, tbody{
         display: flex;
-    }
+    } */
     th, td {
-        display: block;
+        /* display: block; */
         padding: 10px;
         height: 50px;
     }
     tr {
-        display: flex;
-        flex-direction: column; 
+        /* display: flex; */
+        /* flex-direction: column;  */
     }
     
 }
