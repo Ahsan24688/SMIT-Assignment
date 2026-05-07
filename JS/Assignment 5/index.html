@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Crud Form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="input_box">
+        <h1> User mangement (Crud) </h1>
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="number" id="age" placeholder="Enter Your age">
+        <input type="text" id="city" placeholder="Enter Your City">
+        <select id="status">
+            <option value="Pending" selected>Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <button id="add-data"> Add </button>
+        <button id="update" onclick="updateuser()" disabled >Update</button>
+    </div>
+    <div id="display">
+        <h1>Users List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                    <th>Created At</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+                
+            </tbody> 
+        </table>
+        <button id="delete_all" onclick="deleteall()">Delete All</button>
+    </div>
+    <script  type="module" src="crud.js"></script>
+</body>
+</html>
