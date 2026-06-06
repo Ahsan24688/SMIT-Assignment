@@ -1,3 +1,4 @@
+import { db, collection, getDocs } from "./firebaseauth.js";
 let start = document.querySelector("#start");
 let greet = document.querySelector("#greet");
 let quiz = document.querySelector("#header");
@@ -14,6 +15,10 @@ let accuracy = document.querySelector("#accuracy");
 let correct = document.querySelector("#correct");
 let wrong = document.querySelector("#wrong");
 let attempt = document.querySelector("#attempt");
+let admin = document.querySelector("#admin");
+let admin_panel = document.querySelector("#admin_panel");
+let admin_table = document.querySelector("#admin_table_body");
+let finish = document.querySelector("#Finish");
 
 
 let quizapp = [
@@ -39,7 +44,7 @@ let currentQuestion = 0;
 let correctanswer = 0;
 let quizattempt = false;
 
-deselect = () => {
+let deselect = () => {
     radiobutton.forEach((radio) => {
         radio.checked = false;
     })
@@ -52,8 +57,18 @@ let render = () => {
     option2.innerHTML = index.opt2;
     option3.innerHTML = index.opt3;
     option4.innerHTML = index.opt4;
+
+    if (currentQuestion === quizapp.length - 1) {
+        next.style.display = "none";
+        finish.style.display = "block";
+    }
+    else{
+        next.style.display = "block";
+        finish.style.display = "none";
+    }
 }
 start.addEventListener("click", () => {
+    admin_panel.style.display = "none";
     greet.style.display = "none";
     resultText.style.display = "none";
     quiz.style.display = "flex";
@@ -80,13 +95,11 @@ next.addEventListener("click", () => {
         currentQuestion++;
         render();
     }
-    else {
-        quiz.style.display = "none";
-        alert("You have completed the Quiz");
-    }
+    finish.style.display = "block";
 });
 
 result.addEventListener("click", () => {
+    admin_panel.style.display = "none";
     greet.style.display = "none";
     quiz.style.display = "none";
     resultText.style.display = "flex";
@@ -99,8 +112,8 @@ result.addEventListener("click", () => {
         wrong.innerHTML = `Wrong Answers: 0`;
         attempt.innerHTML = "Not Attempted"
 
-    } 
-    
+    }
+
     else {
         let calculate = (correctanswer / quizapp.length) * 100;
         accuracy.innerHTML = `Your Accuracy is ${calculate}%`;
@@ -110,4 +123,47 @@ result.addEventListener("click", () => {
         wrong.innerHTML = `Wrong Answers: ${wronganswer}`;
     }
 });
+
+admin.addEventListener("click", async() => {
+    greet.style.display = "none";
+    quiz.style.display = "none";
+    resultText.style.display = "none";
+    admin_panel.style.display = "flex";
+
+    try {
+        const querySnapshot = await getDocs(collection(db, "users"));
+        admin_table.innerHTML = "";
+        let sno = 1;
+        querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            admin_table.innerHTML += `
+                <tr>
+                    <td>${sno++}</td>
+                    <td>${data.email}</td>
+                    <td>${data.uid}</td>
+                </tr>
+            `;
+        })
+    }
+    catch (error) {
+        console.error("Error fetching data: ", error);
+    }
+});
+
+finish.addEventListener("click", () => {
+    let check = document.querySelector("input[name='answer']:checked");
+
+    if (!check) {
+        alert("Please select an answer");
+        return;
+    }
+
+    if (check.id === quizapp[currentQuestion].correct) {
+        correctanswer++;
+    }
+
+    quiz.style.display = "none";
+    alert("Quiz Finished! Click on Result to see your score.");
+
+})
 

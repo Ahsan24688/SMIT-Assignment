@@ -15,13 +15,14 @@
             <h1 class="aside_title">Quiz App</h1>
             <button id="start" class="aside_btn">Start Quiz</button>
             <button id="result" class="aside_btn"> Result </button>
+            <button id="admin" class="aside_btnn"> Admin Panel </button>
         </div>
         <div class="quiz_container">
-            <div  id="greet" class="greet animate__animated animate__zoomIn">
+            <div id="greet" class="greet animate__animated animate__zoomIn">
                 <h2>Welcome to the Quiz App!</h2>
                 <p>To Start the QUIZ Please Click the Button on the Top Left corner of the Screen</p>
             </div>
-            <div  id="header" class="header animate__animated animate__zoomIn">
+            <div id="header" class="header animate__animated animate__zoomIn">
                 <h2 id="question"> Question Text Here </h2>
                 <ul>
                     <li>
@@ -42,6 +43,7 @@
                     </li>
                 </ul>
                 <button id="next">Next</button>
+                <button id="Finish">Finish</button>
             </div>
             <div id="result_container" class="animate__animated animate__zoomIn">
                 <h2> Quiz Performance</h2>
@@ -52,9 +54,24 @@
                     <div id="attempt"> Quiz attempt </div>
                 </div>
             </div>
+            <div id="admin_panel" class="animate__animated animate__zoomIn">
+                <h1>Admin Panel</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> S NO. </th>
+                            <th> Email </th>
+                            <th> User id </th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin_table_body">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <script src="quiz app.js"></script>
+
+    <script type="module" src="quiz app.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-import { auth, createUserWithEmailAndPassword, db, doc } from "./firebaseauth.js";
+import { auth, createUserWithEmailAndPassword, db, doc, setDoc, collection, getDocs } from "./firebaseauth.js";
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 let loginform = document.querySelector("#loginForm");
@@ -15,19 +15,23 @@ let validateform = () => {
 }
 
 
-loginform.addEventListener("submit",  async (e) => {
+loginform.addEventListener("submit", async (e) => {
     try {
         e.preventDefault();
         if (!validateform()) {
             throw new Error("Firstly, Please Create an Account");
         }
-        await createUserWithEmailAndPassword(auth, email.value, password.value)
-            .then((userCredential) => {
-                // Signed up 
-                const user = userCredential.user;
-                console.log("User Created Successfully", user);
-                window.location.href = "Quiz app.html";
-            })
+        const userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value)
+        const user = userCredential.user;
+        console.log("User Created Successfully", user);
+
+        await setDoc(doc(db, "users", user.uid), {
+            email: user.email,
+            uid: user.uid,
+            createdAt: new Date()
+        });
+        window.location.href = "Quiz app.html";
+
     }
     catch (error) {
         console.log(error);
