@@ -70,3 +70,17 @@ input:focus{
     background-color: #3654b8;
     color: #fff;
 }
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+}

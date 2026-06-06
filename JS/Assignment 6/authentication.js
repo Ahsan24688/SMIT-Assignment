@@ -5,8 +5,19 @@ let loginform = document.querySelector("#loginForm");
 
 
 let validateform = () => {
-    if (email.value === "" || password.value === "" || email.value.length < 1 || password.value.length < 6) {
+    let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    let passwordregex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/
+
+    let vali_Email = email.value.trim();
+    let vali_Pass =password.value.trim();
+
+
+    if (vali_Email === "" || vali_Pass === "" ) {
         console.error(new Error("Please Fill all Fields"));
+        return false;
+    }
+    if (!emailregex.test(vali_Email) || !passwordregex.test(vali_Pass)) {
+        console.error(new Error("Please Enter Valid Email and Password"));
         return false;
     }
     else {
@@ -19,7 +30,7 @@ loginform.addEventListener("submit", async (e) => {
     try {
         e.preventDefault();
         if (!validateform()) {
-            throw new Error("Firstly, Please Create an Account");
+            console.error(new Error("Firstly, Please Create an Account"));
         }
         const userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value)
         const user = userCredential.user;
