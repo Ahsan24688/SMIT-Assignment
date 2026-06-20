@@ -1,12 +1,14 @@
-import { auth, createUserWithEmailAndPassword, db, doc, setDoc, collection, getDocs } from "./firebaseauth.js";
+import { auth, createUserWithEmailAndPassword, db, doc, setDoc, collection, getDocs, onAuthStateChanged } from "./firebaseauth.js";
+
+let namee = document.querySelector("#name");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
-let loginform = document.querySelector("#loginForm");
+let Register = document.querySelector("#Register_form");
 
 
-let validateform = () => {
+function validateform(){
     let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    let passwordregex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/
+    let passwordregex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/
 
     let vali_Email = email.value.trim();
     let vali_Pass =password.value.trim();
@@ -26,25 +28,30 @@ let validateform = () => {
 }
 
 
-loginform.addEventListener("submit", async (e) => {
+Register.addEventListener("submit", async (e) => {
     try {
         e.preventDefault();
         if (!validateform()) {
             console.error(new Error("Firstly, Please Create an Account"));
+            return;
         }
-        const userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value)
+        const userCredential = await createUserWithEmailAndPassword(auth,email.value, password.value)
         const user = userCredential.user;
         console.log("User Created Successfully", user);
 
+        
         await setDoc(doc(db, "users", user.uid), {
+            name: namee.value,
             email: user.email,
             uid: user.uid,
             createdAt: new Date()
         });
-        window.location.href = "Quiz app.html";
+        
+        window.location.replace("Dashboard.html");
 
     }
     catch (error) {
         console.log(error);
     }
 })
+
