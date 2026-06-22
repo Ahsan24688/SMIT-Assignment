@@ -1,4 +1,4 @@
-
+import { showerror } from "./register.js";
 import { auth, signInWithEmailAndPassword, onAuthStateChanged } from "./firebaseauth.js";
 
 onAuthStateChanged(auth, (user) => {
@@ -12,7 +12,7 @@ let Loginemail = document.querySelector("#Lnemail");
 let Loginpassword = document.querySelector("#Lnpass");
 let loginform = document.querySelector("#loginForm");
 
-function validateform(){
+function validateform() {
     let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     let passwordregex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/
 
@@ -20,12 +20,14 @@ function validateform(){
     let vali_Pass = Loginpassword.value.trim();
 
 
-    if (vali_Email === "" || vali_Pass === "" ) {
-        console.error(new Error("Please Fill all Fields"));
+    if (vali_Email === "" || vali_Pass === "") {
+        // console.error(new Error("Please Fill all Fields"));
+        showerror("Please Fill all Fields");
         return false;
     }
     if (!emailregex.test(vali_Email) || !passwordregex.test(vali_Pass)) {
-        console.error(new Error("Please Enter Valid Email and Password"));
+        // console.error(new Error("Please Enter Valid Email and Password"));
+        showerror("Please Enter Valid Email and Password");
         return false;
     }
     else {
@@ -37,21 +39,19 @@ loginform.addEventListener("submit", async (e) => {
     try {
         e.preventDefault();
         if (!validateform()) {
-            console.error(new Error("Firstly, Please Create an Account"));
+            // console.error(new Error("Firstly, Please Create an Account"));
+            showerror("Firstly, Please Create an Account");
             return;
         }
-        
-        signInWithEmailAndPassword(auth, Loginemail.value, Loginpassword.value)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                console.log(user);
-                // ...
-                window.location.replace("Dashboard.html");
-            })
+
+        const userCredential = await signInWithEmailAndPassword(auth, Loginemail.value, Loginpassword.value)
+        const user = userCredential.user;
+        console.log(user);
+        window.location.replace("Dashboard.html");
+
 
     }
     catch (error) {
-        console.log(error);
+        showerror(error.message);
     }
 });

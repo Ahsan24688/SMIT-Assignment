@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
-    <button id="logout"> Logout </button>
-    <button id="delete"> Delete Account </button>
-    <div id="render"></div>
+    <div class="container">
+        <nav>
+            <h1> Dashboard </h1>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+            <div class="btndiv">
+            <button id="logout"> Logout </button>
+            <button id="delete"> Delete Account </button>
+            </div>
+        </nav>
+        <div id="render"></div>
+    </div>
 
     <script type="module" src="Dashboard.js"></script>
 </body>
+
 </html>

@@ -1,18 +1,26 @@
-import { collection,auth, signOut, deleteUser, db, doc, deleteDoc, onAuthStateChanged,getDocs } from "./firebaseauth.js";
+import{ showerror } from "./register.js";
+import { collection, auth, signOut, deleteUser, db, doc, deleteDoc, onAuthStateChanged, getDocs } from "./firebaseauth.js";
 
 let logoutbtn = document.querySelector("#logout");
 let deletebtn = document.querySelector("#delete");
-let renderr = document.querySelector("#render");
+let render = document.querySelector("#render");
 let userarr = [];
+let currentID = null;
 
 onAuthStateChanged(auth, (user) => {
     if (!user) {
         console.log("Please Login First");
         window.location.replace("login.html");
     }
+    else{
+        currentID = user.uid;
+        console.log("current id", currentID);
+        getdata();
+    }
 })
 
-renderr = () => {
+const renderr = () => {
+    render.innerHTML = "";
     userarr.map((user) => {
         let div = document.createElement("div");
         div.innerHTML = `<h1> Welcome ${user.name}</h1>`;
@@ -31,7 +39,7 @@ logoutbtn.addEventListener("click", async () => {
 })
 
 deletebtn.addEventListener("click", async () => {
-    let confirmation = confirm("Are You Sure You Want Delete")
+    let confirmation = confirm("Are You Sure You Want Delete");
     if (confirmation) {
         try {
             const user = auth.currentUser;
@@ -50,18 +58,20 @@ deletebtn.addEventListener("click", async () => {
 })
 
 let getdata = async (user) => {
-    try{
+    try {
         const querySnapshot = await getDocs(collection(db, "users"));
         querySnapshot.forEach((doc) => {
-            userarr.push(doc.data());
+            if (doc.id === currentID){
+                userarr.push(doc.data());
             // console.log(doc.id, " => ", doc.data());
             console.log(userarr);
+            }
         })
+
+        renderr();
+
     }
-    catch(error){
+    catch (error) {
         console.error(error)
     }
 }
-getdata().then(() => {
-    renderr();
-});
