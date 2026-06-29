@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>SignUp</h1>
+    <h1>Create an Account</h1>
     <div class="container">
         <form id="Register_form">
             <label for="name">Name</label>
@@ -21,6 +21,13 @@
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter Your Password"><br><br>
+
+            <div class="password_strength">
+                <span id="uppercase" class="check"> ● At least one Uppercase </span>
+                <span id="specialchar" class="check"> ● At least one special char (@) </span>
+                <span id="number" class="check"> ● At least one number </span>
+                <span id="length" class="check"> ● Minimum 8 characters </span>
+            </div>
 
             <input type="submit" value="Register" class="btn">
             <p style="color: black"> Already Have an Account, please Click to <a href="./login.html">Login Here</a>

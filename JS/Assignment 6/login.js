@@ -4,7 +4,7 @@ import { auth, signInWithEmailAndPassword, onAuthStateChanged } from "./firebase
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("User is signed in:", user);
-        window.location.replace("quiz app.html");
+        window.location.replace("Dashboard.html");
     }
 });
 
