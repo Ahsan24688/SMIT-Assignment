@@ -14,7 +14,7 @@ let loginform = document.querySelector("#loginForm");
 
 function validateform() {
     let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    let passwordregex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/
+    let passwordregex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@]).{8,}$/
 
     let vali_Email = Loginemail.value.trim();
     let vali_Pass = Loginpassword.value.trim();

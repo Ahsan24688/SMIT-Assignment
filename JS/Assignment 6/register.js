@@ -1,4 +1,4 @@
-import { auth, createUserWithEmailAndPassword, db, doc, setDoc, collection, getDocs, onAuthStateChanged } from "./firebaseauth.js";
+import { auth, createUserWithEmailAndPassword, db, doc, setDoc, collection, getDocs, onAuthStateChanged, provider, signInWithPopup, GoogleAuthProvider } from "./firebaseauth.js";
 
 let namee = document.querySelector("#name");
 let email = document.querySelector("#email");
@@ -11,6 +11,7 @@ let uppercase = document.querySelector("#uppercase");
 let specialchar = document.querySelector("#specialchar");
 let number = document.querySelector("#number");
 let length = document.querySelector("#length");
+let googlebtn = document.querySelector("#googlebtn");
 
 if (modalcontainer) {
     modalcontainer.style.display = "none";
@@ -31,11 +32,21 @@ if (closebtn) {
     })
 }
 
+if (password) {
+    password.addEventListener("input", () => {
+        let pass = password.value;
+
+        uppercase.className = /[A-Z]/.test(pass) ? "check" : "uncheck";
+        specialchar.className = /@/.test(pass) ? "check" : "uncheck";
+        number.className = /[0-9]/.test(pass) ? "check" : "uncheck";
+        length.className = pass.length >= 8 ? "check" : "uncheck";
+    })
+}
 
 if (Register) {
     function validateform() {
         let emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        let passwordregex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@]).{8,}$/;
+        let passwordregex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@]).{8,}$/;
 
         let vali_Email = email.value.trim();
         let vali_Pass = password.value.trim();
@@ -56,14 +67,6 @@ if (Register) {
         }
     }
 
-    password.addEventListener("input", () => {
-        let pass = password.value;
-
-        uppercase.className = /[A-Z]/.test(pass) ? "check" : "uncheck";
-        specialchar.className = /@/.test(pass) ? "check" : "uncheck";
-        number.className = /[0-9]/.test(pass) ? "check" : "uncheck";
-        length.className = pass.length >= 8 ? "check" : "uncheck";
-    })
 
 
     Register.addEventListener("submit", async (e) => {
@@ -94,5 +97,27 @@ if (Register) {
         }
     })
 }
+
+let googlesignup = async () => {
+    try {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                const user = result.user;
+                console.log(user);
+                console.log(token);
+                console.log(credential)
+                window.location.replace("Dashboard.html")
+            })
+        }
+    catch (error) {
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        showerror(error.message);
+        }
+    }
+    if(googlebtn){
+    googlebtn.addEventListener("click", ()=> googlesignup());
+    }
 
 
