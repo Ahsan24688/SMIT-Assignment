@@ -24,6 +24,21 @@
         </nav>
         <div id="render"></div>
     </div>
+    <div class="post">
+        <p> Post Your Story Here </p>
+        <button id="postbtn"> Create Post </button>
+
+        <div class="postmodal" id="postmodal">
+            <div class="postbox">
+                <h1> Create Post</h1>
+                <input type="text" placeholder="Enter Title" id="title">
+                <textarea name="story" id="story" cols="30" rows="10" placeholder="Enter Your Story"></textarea>
+                <button id="save"> save </button>
+                <button id="close"> close </button>
+            </div>
+        </div>
+        <div id="renderposts">No Posts....</div>
+    </div>
 
     <script type="module" src="Dashboard.js"></script>
 </body>
