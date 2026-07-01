@@ -1,5 +1,6 @@
-import { showerror } from "./register.js";
+import { showerror, googlesignup } from "./register.js";
 import { auth, signInWithEmailAndPassword, onAuthStateChanged } from "./firebaseauth.js";
+let googlebtn = document.querySelector("#googlebtn");
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -55,3 +56,10 @@ loginform.addEventListener("submit", async (e) => {
         showerror(error.message);
     }
 });
+
+if (googlebtn) {
+    googlebtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        googlesignup();
+    });
+}

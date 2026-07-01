@@ -98,11 +98,11 @@ if (Register) {
     })
 }
 
-let googlesignup = async () => {
+export let googlesignup = async () => {
     try {
-        signInWithPopup(auth, provider)
+        await signInWithPopup(auth, provider)
             .then((result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const credential =  GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
                 console.log(user);
@@ -113,11 +113,16 @@ let googlesignup = async () => {
         }
     catch (error) {
         const credential = GoogleAuthProvider.credentialFromError(error);
-        showerror(error.message);
+        console.log(error);
+        console.log(credential);
+        // showerror(error.message);
         }
     }
     if(googlebtn){
-    googlebtn.addEventListener("click", ()=> googlesignup());
+    googlebtn.addEventListener("click", (e)=> {
+        e.preventDefault();
+        googlesignup();
+    });
     }
 
 
