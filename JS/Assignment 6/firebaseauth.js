@@ -3,7 +3,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, deleteUser, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
-  import { getFirestore, doc, addDoc, setDoc, collection, getDocs, deleteDoc, where, query } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+  import { getFirestore, doc, addDoc, setDoc, collection, getDocs, deleteDoc, where, query,updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
 
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -32,4 +32,4 @@ const db = getFirestore(app);
 
 const provider = new GoogleAuthProvider();
 
-export { auth, createUserWithEmailAndPassword, db, doc, setDoc, addDoc,collection, getDocs, where, query, signInWithEmailAndPassword, onAuthStateChanged, signOut, deleteUser, deleteDoc, provider, signInWithPopup, GoogleAuthProvider };
+export { auth, createUserWithEmailAndPassword, db, doc, setDoc, addDoc,collection, getDocs, where, updateDoc, serverTimestamp, query, signInWithEmailAndPassword, onAuthStateChanged, signOut, deleteUser, deleteDoc, provider, signInWithPopup, GoogleAuthProvider };

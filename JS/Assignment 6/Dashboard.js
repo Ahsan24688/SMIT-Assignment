@@ -1,5 +1,5 @@
 import { showerror } from "./register.js";
-import { collection, addDoc, auth, signOut, deleteUser, db, doc, deleteDoc, where, query, onAuthStateChanged, getDocs } from "./firebaseauth.js";
+import { collection, addDoc, auth, signOut, deleteUser, db, doc, deleteDoc, updateDoc, serverTimestamp, setDoc, where, query, onAuthStateChanged, getDocs } from "./firebaseauth.js";
 
 let logoutbtn = document.querySelector("#logout");
 let deletebtn = document.querySelector("#delete");
@@ -8,10 +8,13 @@ let postbtn = document.querySelector("#postbtn");
 let postmodal = document.querySelector("#postmodal");
 let closemodal = document.querySelector("#close");
 let savepost = document.querySelector("#save");
+let updatepost = document.querySelector("#update");
 let postrender = document.querySelector("#renderposts");
 let postarr = [];
 let userarr = [];
 let currentID = null;
+let editid = null;
+
 
 onAuthStateChanged(auth, (user) => {
     if (!user) {
@@ -88,6 +91,9 @@ let getdata = async (user) => {
 // create post area
 let createpost = () => {
     postmodal.style.display = "flex";
+    savepost.style.display = "flex";
+    closemodal.style.display = "flex";
+    updatepost.style.display = "none";
     console.log(true);
 }
 postbtn.addEventListener("click", createpost);
@@ -111,6 +117,7 @@ let savepostdata = async () => {
         await getpostdata();
         renderpost();
         postmodal.style.display = "none";
+        updatepost.style.display = "none";
     }
     catch (error) {
         showerror(error.message);
@@ -133,6 +140,7 @@ let getpostdata = async () => {
             ]
             console.log(postarr);
         });
+        postarr.sort((a, b) => b.data.CreatedAT.toDate() - a.data.CreatedAT.toDate());
     }
     catch(error) {
         showerror(error.message);
@@ -148,8 +156,8 @@ let renderpost = () => {
         <p>description:${post.data.Description}</p>
 
         <div class="btnns">
-        <button id="edit">Edit</button>
-        <button id="delete">Delete</button>
+        <button class="editbtn" data-id="${post.id}">Edit</button>
+        <button class="deletebtn" data-id="${post.id}">Delete</button>
         </div>
 
         <div class="time">
@@ -158,6 +166,71 @@ let renderpost = () => {
         </div>`;
         
         postrender.appendChild(div);
+        let editbtn = div.querySelector(".editbtn");
+        editbtn.addEventListener("click", () =>{
+            let getid = editbtn.getAttribute("data-id");
+            editdata(getid);
+        });
+
+        let deletebtn = div.querySelector(".deletebtn");
+        deletebtn.addEventListener("click", async () => {
+            let getid = deletebtn.getAttribute("data-id");
+            deletepostdata(getid);
+        });
     })
 }
+let editdata = (id) =>{
+    console.log(id);
+    let getpost = postarr.find((post) => post.id === id);
+    console.log(getpost);
+    document.querySelector("#title").value = getpost.data.Title;
+    document.querySelector("#story").value = getpost.data.Description;
+    postmodal.style.display = "flex";
+    savepost.style.display = "none";
+    updatepost.style.display = "flex";
+    closemodal.style.display = "flex";
 
+    editid = id;
+}
+let updatepostdata = async () => {
+    let title = document.querySelector("#title").value;
+    let des = document.querySelector("#story").value;
+
+    if(!editid){
+        showerror("Please Select Post First");
+        return;
+    }
+    try{
+        const docRef = doc(db, "Posts", editid);
+        await updateDoc(docRef, {
+            Title: title,
+            Description: des,
+            time: serverTimestamp(),  
+        })
+        await getpostdata();
+        renderpost();
+        postmodal.style.display = "none";
+        updatepost.style.display = "none";
+    }
+    catch (error){
+        showerror(error.message);
+    }
+}
+
+updatepost.addEventListener("click", updatepostdata);
+
+
+let deletepostdata = async (id) => {
+    console.log(id);
+    let confirmation = confirm("Are You Sure You Want Delete");
+    if(confirmation){
+        try{
+            await deleteDoc(doc(db, "Posts", id));
+            await getpostdata();
+            renderpost();
+        }
+        catch(error){
+            showerror(error.message);
+        }
+    }
+}
