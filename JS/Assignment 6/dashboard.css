@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color:#466be4;
+
+body {
+    background-color: #466be4;
 }
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,41 +17,50 @@ nav{
     background-color: #9baeec;
     color: #fff;
 }
-ul{
+
+ul {
     display: flex;
     gap: 20px;
     list-style: none;
 }
-li{
+
+li {
     padding: 8px 10px;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
 }
-li:hover{
-    background-color:#466be4;
+
+li:hover {
+    background-color: #466be4;
     cursor: pointer;
 }
-.btndiv{
+
+
+.btndiv {
     display: flex;
     gap: 10px;
 }
-button{
+
+button {
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-button:hover{
+
+button:hover {
     background-color: #466be4;
     color: #fff;
 }
-#render{
+
+#render {
     text-align: center;
     margin-top: 20px;
     color: white;
 }
-.postmodal{
+
+.postmodal {
     position: fixed;
     top: 0;
     left: 0;
@@ -62,8 +72,10 @@ button:hover{
     z-index: 9999;
     display: none;
     background-color: transparent #0039f3;
+    margin: auto;
 }
-.postbox{
+
+.postbox {
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -73,17 +85,22 @@ button:hover{
     text-align: center;
     gap: 10px;
 }
-input, textarea{
+
+input,
+textarea {
     padding: 10px;
     border-radius: 5px;
     border: none;
     outline: none;
     /* transition: 0.3s ease-in-out; */
 }
-input:focus, textarea:focus{
+
+input:focus,
+textarea:focus {
     border: 1px solid #466be4;
 }
-#renderpost{
+
+#renderpost {
     background-color: #9baeec;
     padding: 20px;
     display: flex;
@@ -92,28 +109,53 @@ input:focus, textarea:focus{
     margin-top: 20px;
     border-radius: 10px;
 }
-.postcard{
+
+.postcard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
     background-color: #dbe1f3;
     padding: 20px;
     margin: 10px;
     border-radius: 15px;
     gap: 10px;
 }
-.time{
+
+.time {
     text-align: right;
 }
 
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.post-text {
+    color: #ffffff;
+}
+
+#postbtn {
+    margin-right: auto;
+}
+
+
 @media screen and (max-width: 600px) {
-    nav{
+    nav {
         flex-direction: column;
     }
-    ul{
+
+    ul {
         flex-direction: column;
     }
-    li{
+
+    li {
         text-align: center;
     }
-    .btndiv{
+
+    .btndiv {
         flex-direction: column;
     }
 }

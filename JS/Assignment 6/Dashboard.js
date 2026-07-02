@@ -10,6 +10,7 @@ let closemodal = document.querySelector("#close");
 let savepost = document.querySelector("#save");
 let updatepost = document.querySelector("#update");
 let postrender = document.querySelector("#renderposts");
+let toggle = document.querySelector("#toggle");
 let postarr = [];
 let userarr = [];
 let currentID = null;
