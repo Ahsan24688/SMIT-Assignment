@@ -101,28 +101,35 @@ if (Register) {
 export let googlesignup = async () => {
     try {
         await signInWithPopup(auth, provider)
-            .then((result) => {
-                const credential =  GoogleAuthProvider.credentialFromResult(result);
+            .then(async (result) => {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
                 console.log(user);
                 console.log(token);
                 console.log(credential)
+
+                await setDoc(doc(db, "users", user.uid), {
+                    name: user.displayName,
+                    email: user.email,
+                    uid: user.uid,
+                    createdAt: new Date()
+                });
                 window.location.replace("Dashboard.html")
             })
-        }
+    }
     catch (error) {
         const credential = GoogleAuthProvider.credentialFromError(error);
         console.log(error);
         console.log(credential);
         // showerror(error.message);
-        }
     }
-    if(googlebtn){
-    googlebtn.addEventListener("click", (e)=> {
+}
+if (googlebtn) {
+    googlebtn.addEventListener("click", (e) => {
         e.preventDefault();
         googlesignup();
     });
-    }
+}
 
 
