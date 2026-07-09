@@ -4,43 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Register | Posting Website</title>
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <h1>Create an Account</h1>
-    <div class="container">
-        <form id="Register_form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter Your name"><br><br>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter Your Email"><br><br>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter Your Password"><br><br>
-
-            <div class="password_strength">
-                <span id="uppercase" class="check"> ● At least one Uppercase </span>
-                <span id="specialchar" class="check"> ● At least one special char (@) </span>
-                <span id="number" class="check"> ● At least one number </span>
-                <span id="length" class="check"> ● Minimum 8 characters </span>
+    <div class="page-shell">
+        <div class="auth-card">
+            <div class="auth-visual">
+                <div class="brand">
+                    <span class="brand-mark">P</span>
+                    <span>Posting Website</span>
+                </div>
+                <h1>Create your account</h1>
+                <p>Join thousands of creators sharing stories, updates, and ideas from one elegant platform.</p>
+                <ul class="benefits">
+                    <li>Fast and secure registration</li>
+                    <li>Personal dashboard access</li>
+                    <li>Simple content publishing</li>
+                </ul>
             </div>
 
-            <input type="submit" value="Register" class="btn">
-            <p style="color: black"> Already Have an Account, please Click to <a href="./login.html">Login Here</a>
-            </p>
-            <button type="button" class="btn" id="googlebtn"> Sign in with Google </button>
-        </form>
+            <div class="auth-form-panel">
+                <form id="Register_form">
+                    <div class="form-heading">
+                        <h2>Register</h2>
+                        <p>Start your journey in minutes.</p>
+                    </div>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                    <div class="password_strength">
+                        <span id="uppercase" class="check">At least one uppercase letter</span>
+                        <span id="specialchar" class="check">At least one special character (@)</span>
+                        <span id="number" class="check">At least one number</span>
+                        <span id="length" class="check">Minimum 8 characters</span>
+                    </div>
+
+                    <input type="submit" value="Create Account" class="btn btn-submit">
+                    <div class="divider"><span>or</span></div>
+                    <button type="button" class="btn btn-google" id="googlebtn">Continue with Google</button>
+                    <p class="login-link">Already have an account? <a href="./login.html">Login here</a></p>
+                </form>
+            </div>
+        </div>
     </div>
 
-
-    <div id="modal_container" class = "animate__animated animate__zoomIn">
+    <div id="modal_container" class="animate__animated animate__zoomIn">
         <div class="modal_boxx">
             <div class="mbox">
-                <h2>❌Error</h2>
+                <h2>❌ Error</h2>
                 <p id="Message"></p>
                 <button id="close">Close</button>
             </div>

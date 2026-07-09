@@ -3,25 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Website </title>
+    <title>StorySphere | Personal Blogging Platform</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <h1> Website </h1>
-        <div class="btn">
-            <button class="btnn"><a href="register.html"> Register </a></button>
-            <button class="btnn"><a href="login.html"> Login </a></button>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="heading">
-            <h1>Your Personal Space to Post</h1>
-            <p>Create an account to access your personalized dashboard and start sharing your stories with the world.</p>
-        </div>
-        <div class="image">
-            <img src="./1.png" alt="image">
-        </div>
+    <div class="page-shell">
+        <nav class="navbar">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">S</span>
+                <span>Posting Website</span>
+            </a>
+            <div class="nav-actions">
+                <a href="register.html" class="nav-btn nav-btn-primary">Register</a>
+                <a href="login.html" class="nav-btn nav-btn-secondary">Login</a>
+            </div>
+        </nav>
+
+        <main class="hero">
+            <section class="hero-content">
+                <div class="eyebrow">Create. Share. Grow.</div>
+                <h1>Your personal space to publish meaningful stories.</h1>
+                <p>Build your own digital journal, share ideas with your community, and keep everything beautifully organized from one elegant dashboard.</p>
+
+                <div class="hero-actions">
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                    <a href="login.html" class="btn btn-secondary">Explore Dashboard</a>
+                </div>
+
+                <ul class="highlights">
+                    <li>Secure account access</li>
+                    <li>Modern dashboard experience</li>
+                    <li>Fast and simple publishing</li>
+                </ul>
+            </section>
+
+            <section class="hero-visual">
+                <div class="image-card">
+                    <img src="./1.png" alt="Illustration of a modern dashboard">
+                    <div class="floating-card">
+                        <strong>+12k</strong>
+                        <span>posts shared</span>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>

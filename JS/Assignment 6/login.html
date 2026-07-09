@@ -4,33 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Login Page </title>
+    <title>Login | Posting Website</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <h1> Login Here </h1>
-    <div class="container">
-        <form id="loginForm">
-            <label for="email">Email:</label>
-            <input type="email" id="Lnemail" name="Lnemail" placeholder="Enter Your Email"><br><br>
+    <div class="page-shell">
+        <div class="auth-card">
+            <div class="auth-visual">
+                <div class="brand">
+                    <span class="brand-mark">P</span>
+                    <span>Posting Website</span>
+                </div>
+                <h1>Welcome back</h1>
+                <p>Sign in to continue sharing your posts, managing your dashboard, and connecting with your audience.</p>
+                <ul class="benefits">
+                    <li>Secure access to your account</li>
+                    <li>Instant dashboard updates</li>
+                    <li>Fast content publishing</li>
+                </ul>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="Lnpass" name="Lnpass" placeholder="Enter Your Password"><br><br>
+            <div class="auth-form-panel">
+                <form id="loginForm">
+                    <div class="form-heading">
+                        <h2>Login</h2>
+                        <p>Access your account to continue.</p>
+                    </div>
 
-            <input type="submit" value="Login" class="btn">
-            <p style="color: black"> Don't Have an Account, please Click to <a href="./register.html">Register Here</a>
-            </p>
-            <button type="button" class="btn" id="googlebtn"> Sign in with Google </button>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="Lnemail" name="Lnemail" placeholder="Enter your email">
 
-        </form>
+                    <label for="password">Password</label>
+                    <input type="password" id="Lnpass" name="Lnpass" placeholder="Enter your password">
+
+                    <input type="submit" value="Login" class="btn btn-submit">
+                    <div class="divider"><span>or</span></div>
+                    <button type="button" class="btn btn-google" id="googlebtn">Continue with Google</button>
+                    <p class="register-link">Don't have an account? <a href="./register.html">Register here</a></p>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <div id="modal_container" class = "animate__animated animate__zoomIn">
+    <div id="modal_container" class="animate__animated animate__zoomIn">
         <div class="modal_boxx">
             <div class="mbox">
-                <h2>❌Error</h2>
+                <h2>❌ Error</h2>
                 <p id="Message"></p>
                 <button id="close">Close</button>
             </div>
