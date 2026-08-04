@@ -2,23 +2,32 @@ import React from 'react'
 import { useNavigate } from 'react-router'
 
 const Productcard = (props) => {
-    let nevigate = useNavigate();
-    console.log(nevigate);
+    const navigate = useNavigate()
+
+    if (props.loading) {
+        return (
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                <div className="h-48 w-full bg-gray-200 animate-pulse" />
+                <div className="p-4 space-y-3">
+                    <div className="h-3 w-20 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-5/6 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-4/5 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-8 w-28 bg-gray-200 rounded animate-pulse mt-4" />
+                </div>
+            </div>
+        )
+    }
+
     return (
-
-
-        <div className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300"
-            onClick={() => {nevigate(`/item/${props.id}`)}}>
-
-
+        <div
+            className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300"
+            onClick={() => navigate(`/item/${props.id}`)}
+        >
             <img className="h-48 w-full object-cover object-center" src={props.image} alt="blog" />
             <div className="p-4 flex flex-col grow">
-
                 <h2 className="text-xs font-bold uppercase text-black mb-2">{props.category}</h2>
-
-                <h1 className="text-lg  text-black mb-2 line-clamp-2">{props.title}</h1>
-
-
+                <h1 className="text-lg text-black mb-2 line-clamp-2">{props.title}</h1>
                 <p className="text-sm text-gray-600 line-clamp-2 mb-4">{props.description}</p>
 
                 <div className="flex items-center flex-wrap mt-auto">
