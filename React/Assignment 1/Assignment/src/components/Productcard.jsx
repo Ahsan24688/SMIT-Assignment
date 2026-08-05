@@ -4,21 +4,6 @@ import { useNavigate } from 'react-router'
 const Productcard = (props) => {
     const navigate = useNavigate()
 
-    if (props.loading) {
-        return (
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-                <div className="h-48 w-full bg-gray-200 animate-pulse" />
-                <div className="p-4 space-y-3">
-                    <div className="h-3 w-20 bg-gray-200 rounded animate-pulse" />
-                    <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
-                    <div className="h-4 w-5/6 bg-gray-200 rounded animate-pulse" />
-                    <div className="h-4 w-4/5 bg-gray-200 rounded animate-pulse" />
-                    <div className="h-8 w-28 bg-gray-200 rounded animate-pulse mt-4" />
-                </div>
-            </div>
-        )
-    }
-
     return (
         <div
             className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300"

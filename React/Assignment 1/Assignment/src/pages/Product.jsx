@@ -4,50 +4,29 @@ import { useParams } from 'react-router'
 import axios from 'axios'
 
 const Product = () => {
-  const [product, setProduct] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const { id } = useParams()
 
-  const fetchselectedProducts = async () => {
-    setLoading(true)
+  let [product, setProduct] = useState(null)
+  let { id } = useParams()
+
+  let fetchselectedProducts = async () => {
     try {
-      const response = await axios.get(`https://dummyjson.com/products/${id}`)
+      let response = await axios.get(`https://dummyjson.com/products/${id}`)
+      console.log(response.data)
       setProduct(response.data)
-    } catch (error) {
+    }
+    catch (error) {
       console.error(error)
-    } finally {
-      setLoading(false)
     }
   }
 
   useEffect(() => {
     fetchselectedProducts()
-  }, [id])
+  }, [])
 
-  if (loading) {
-    return (
-      <section className="text-black body-font overflow-hidden bg-white">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <div className="lg:w-1/2 w-full lg:h-auto h-64 bg-gray-200 rounded animate-pulse" />
-            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 space-y-4">
-              <div className="h-4 w-24 bg-gray-200 rounded animate-pulse" />
-              <div className="h-8 w-3/4 bg-gray-200 rounded animate-pulse" />
-              <div className="h-4 w-32 bg-gray-200 rounded animate-pulse" />
-              <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
-              <div className="h-4 w-5/6 bg-gray-200 rounded animate-pulse" />
-              <div className="h-4 w-4/5 bg-gray-200 rounded animate-pulse" />
-              <div className="h-10 w-32 bg-gray-200 rounded animate-pulse mt-6" />
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
 
   return (
     <div>
-      {product ? (
+      {(product) ?
         <section className="text-black body-font overflow-hidden bg-white">
           <div className="container px-5 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
@@ -120,9 +99,10 @@ const Product = () => {
             </div>
           </div>
         </section>
-      ) : (
-        <h1>Product not found</h1>
-      )}
+        :
+
+        <h1>Product not found</h1>}
+
     </div>
   )
 }
