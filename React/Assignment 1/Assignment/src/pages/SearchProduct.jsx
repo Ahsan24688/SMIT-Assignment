@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Productcard from '../components/Productcard'
+import Navbar from '../components/Navbar'
 
 const SearchProduct = () => {
     let [searchTerm, setSearchTerm] = useState("")   // for search term (where we will store the value of input field)
@@ -51,6 +52,7 @@ const SearchProduct = () => {
 
     return (
         <div>
+            <Navbar />
             <input type="text" placeholder="Search Product" onChange={(e) => setSearchTerm(e.target.value)} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

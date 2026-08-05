@@ -1,11 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
 
+
 const Productcard = (props) => {
     const navigate = useNavigate()
 
     return (
         <div
+        
             className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300"
             onClick={() => navigate(`/item/${props.id}`)}
         >

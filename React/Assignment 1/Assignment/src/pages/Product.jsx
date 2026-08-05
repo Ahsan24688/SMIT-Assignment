@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import axios from 'axios'
+import Navbar from '../components/Navbar'
 
 const Product = () => {
 
@@ -26,6 +27,7 @@ const Product = () => {
 
   return (
     <div>
+      <Navbar/>
       {(product) ?
         <section className="text-black body-font overflow-hidden bg-white">
           <div className="container px-5 py-24 mx-auto">
