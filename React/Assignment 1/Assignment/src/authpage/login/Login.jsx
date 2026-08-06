@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
     return (
         <div className='flex flex-col items-center justify-center w-full m-4' >
-            <div className='flex flex-col items-center justify-center bg-amber-200 m-4 p-4 rounded-2xl w-96  gap-6'>
+            <div className='flex flex-col items-center justify-center bg-amber-200 m-4 p-4 rounded-2xl  gap-6'>
                 <h1 className='font-bold text-2xl'>Login</h1>
                 <input type="email" placeholder='Enter your email' className='border-2 border-gray-300 rounded p-2 m-2 bg-white' />
                 <input type="password" placeholder='Enter your password' className='border-2 border-gray-300 rounded p-2 m-2 bg-white' />
