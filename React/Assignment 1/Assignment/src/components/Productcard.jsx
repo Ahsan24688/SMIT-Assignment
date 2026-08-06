@@ -8,10 +8,10 @@ const Productcard = (props) => {
     return (
         <div
         
-            className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300"
+            className="cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition duration-300 h-96 p-2"
             onClick={() => navigate(`/item/${props.id}`)}
         >
-            <img className="h-48 w-full object-cover object-center" src={props.image} alt="blog" />
+            <img className="h-48 w-full object-cover object-center" src={props.image} alt="blog " />
             <div className="p-4 flex flex-col grow">
                 <h2 className="text-xs font-bold uppercase text-black mb-2">{props.category}</h2>
                 <h1 className="text-lg text-black mb-2 line-clamp-2">{props.title}</h1>

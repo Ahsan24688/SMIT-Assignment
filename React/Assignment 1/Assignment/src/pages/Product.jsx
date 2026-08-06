@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import axios from 'axios'
 import Navbar from '../components/Navbar'
+import Footer from '../landingassets/Footer'
 
 const Product = () => {
 
@@ -100,6 +101,7 @@ const Product = () => {
               </div>
             </div>
           </div>
+          <Footer />
         </section>
         :
 

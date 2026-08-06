@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Productcard from '../components/Productcard'
 import Navbar from '../components/Navbar'
+import Footer from '../landingassets/Footer'
 
 const SearchProduct = () => {
     let [searchTerm, setSearchTerm] = useState("")   // for search term (where we will store the value of input field)
@@ -51,11 +52,13 @@ const SearchProduct = () => {
 
 
     return (
-        <div>
+        <>
             <Navbar />
-            <input type="text" placeholder="Search Product" onChange={(e) => setSearchTerm(e.target.value)} />
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="flex flex-col gap-4 m-4 p-4">
+                <input type="text" placeholder="Search Product" onChange={(e) => setSearchTerm(e.target.value)}
+                    className="border-2 rounded-lg p-2 justify-end bg-white" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl">
                 {
                     (searchTerm.length > 1 ? searchResults : products).map((Product, index) => {
                         return (
@@ -68,7 +71,9 @@ const SearchProduct = () => {
                         )
                     })}
             </div>
-        </div>
+
+            <Footer />
+        </>
     )
 }
 export default SearchProduct
