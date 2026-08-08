@@ -4,6 +4,8 @@ import axios from 'axios'
 import Productcard from '../components/Productcard'
 import Navbar from '../components/Navbar'
 import Footer from '../landingassets/Footer'
+import Skeleton from './Skeleton'
+
 
 const SearchProduct = () => {
     let [searchTerm, setSearchTerm] = useState("")   // for search term (where we will store the value of input field)
@@ -12,7 +14,7 @@ const SearchProduct = () => {
 
     let [searchResults, setSearchResults] = useState([])   // for search results (where we will store the searched products data)
 
-
+    let [loading, setLoading] = useState(true)
 
     let Products = async () => {          // for fetching products
         try {
@@ -40,16 +42,18 @@ const SearchProduct = () => {
 
 
     useEffect(() => {   // for fetching products on page load
-        Products()
+        Products().then(() => setLoading(false))
     }, [])
 
     useEffect(() => {   // for searching products on search term change
         setSearchResults([])
         if (searchTerm.length > 1) {
-            SearchProducts()
+            setLoading(true)
+            SearchProducts().then(() => setLoading(false))
         }
     }, [searchTerm])
 
+    let displayList = searchTerm.length > 1 ? searchResults : products;
 
     return (
         <>
@@ -60,16 +64,33 @@ const SearchProduct = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl">
                 {
-                    (searchTerm.length > 1 ? searchResults : products).map((Product, index) => {
-                        return (
-                            <Productcard key={index}
-                                id={Product.id}
-                                image={Product.thumbnail}
-                                title={Product.title}
-                                description={Product.description}
-                                category={Product.category} />
+                    (loading) ? (
+                        <div className=' col-span-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl'>
+                            {[...Array(8)].map((_, index) => (
+                                <Skeleton key={index} />
+                            ))}
+                        </div>
+                    )
+                        :
+                        displayList.length > 0 ? (
+                            displayList.map((Product, index) => {
+                                return (
+                                    <Productcard key={index}
+                                        id={Product.id}
+                                        image={Product.thumbnail}
+                                        title={Product.title}
+                                        description={Product.description}
+                                        category={Product.category} />
+                                )
+                            })
                         )
-                    })}
+                            :
+                            (
+                                <div className="text-center py-20">
+                                    <h1 className="text-xl font-semibold text-gray-600">No products found.</h1>
+                                </div>
+                            )
+                }
             </div>
 
             <Footer />
