@@ -10,7 +10,7 @@ const Hero = () => {
         <div>
             <div className="flex justify-center m-4">
                 <img src={img} alt="Landing Page Image"
-                    className="w-full h-150  rounded-2xl" />
+                    className="w-full h-150  rounded-2xl object-cover" />
             </div>
             <div className="flex flex-col items-center text-center m-4 bg-amber-200 rounded-2xl">
                 <div className="flex flex-col justify-center">

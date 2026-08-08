@@ -5,6 +5,8 @@ import Productcard from '../components/Productcard'
 import Navbar from '../components/Navbar'
 import Footer from '../landingassets/Footer'
 import Skeleton from './Skeleton'
+import react, { useContext } from 'react'
+import { ThemeContext } from '../components/Context'
 
 
 const SearchProduct = () => {
@@ -15,6 +17,9 @@ const SearchProduct = () => {
     let [searchResults, setSearchResults] = useState([])   // for search results (where we will store the searched products data)
 
     let [loading, setLoading] = useState(true)
+
+    let { theme, setTheme } = useContext(ThemeContext);
+
 
     let Products = async () => {          // for fetching products
         try {
@@ -62,7 +67,8 @@ const SearchProduct = () => {
                 <input type="text" placeholder="Search Product" onChange={(e) => setSearchTerm(e.target.value)}
                     className="border-2 rounded-lg p-2 justify-end bg-white" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl">
+            <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'}`}>
+
                 {
                     (loading) ? (
                         <div className=' col-span-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl'>

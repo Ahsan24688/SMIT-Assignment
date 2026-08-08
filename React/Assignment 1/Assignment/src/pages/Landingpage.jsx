@@ -1,17 +1,23 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../landingassets/Hero'
+import react, { useContext } from 'react'
+import { ThemeContext } from '../components/Context'
 
 
 const Landingpage = () => {
+
+  let { theme, setTheme } = useContext(ThemeContext);
+
   return (
-    
-    <div>
-        <Navbar/>
-        <Hero/>
-        
-      
-      
+
+    <div className={`p-2 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'
+      }`}>
+      <Navbar />
+      <Hero />
+
+
+
     </div>
   )
 }

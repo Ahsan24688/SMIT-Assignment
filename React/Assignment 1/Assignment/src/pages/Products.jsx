@@ -4,10 +4,15 @@ import Productcard from '../components/Productcard'
 import Navbar from '../components/Navbar'
 import Footer from '../landingassets/Footer'
 import Skeleton from './Skeleton'
+import react, { useContext } from 'react'
+import { ThemeContext } from '../components/Context'
+
 
 const Products = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
+  let { theme, setTheme } = useContext(ThemeContext);
+
 
   const fetchproducts = async () => {
     try {
@@ -38,7 +43,8 @@ const Products = () => {
         :
         products.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl">
+            <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'
+        }`}>
               {products.map((product, index) => (
                 <div key={index}>
                   <Productcard
