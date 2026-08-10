@@ -4,17 +4,24 @@ import img2 from './2.png'
 import img3 from './3.png'
 import img4 from './4.png'
 import Footer from './Footer'
+import react, { useContext } from 'react'
+import { ThemeContext } from '../components/Context'
 
 const Hero = () => {
+
+    let { theme, setTheme } = useContext(ThemeContext);
+
+
     return (
         <div>
             <div className="flex justify-center m-4">
                 <img src={img} alt="Landing Page Image"
                     className="w-full h-150  rounded-2xl object-cover" />
             </div>
-            <div className="flex flex-col items-center text-center m-4 bg-amber-200 rounded-2xl">
+            <div className={`flex flex-col items-center text-center m-4 rounded-2xl ${theme === 'dark' ? 'bg-indigo-300 text-black' : 'bg-amber-200 text-black'
+                }`}>
                 <div className="flex flex-col justify-center">
-                    <h1 className=" text-4xl font-bold text-black m-4">
+                    <h1 className=" text-4xl font-bold m-4">
                         Lets Explore Products</h1>
                     <p className="text-lg text-black-700 m-8">Explore our latest range of premium products <br />crafted just for you. Find your favorites today and experience <br /> unmatched quality, sleek design, and everyday reliability that fits your lifestyle perfectly</p>
                 </div>
@@ -26,7 +33,7 @@ const Hero = () => {
                 </div>
             </div>
             <Footer />
-            
+
         </div >
     )
 }

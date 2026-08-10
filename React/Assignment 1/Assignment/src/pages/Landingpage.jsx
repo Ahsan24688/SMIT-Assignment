@@ -11,7 +11,7 @@ const Landingpage = () => {
 
   return (
 
-    <div className={`p-2 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'
+    <div className={`p-2 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-indigo-500 text-black'
       }`}>
       <Navbar />
       <Hero />
@@ -23,3 +23,5 @@ const Landingpage = () => {
 }
 
 export default Landingpage
+
+

@@ -4,11 +4,15 @@ import { useParams } from 'react-router'
 import axios from 'axios'
 import Navbar from '../components/Navbar'
 import Footer from '../landingassets/Footer'
+import react, { useContext } from 'react'
+import { ThemeContext } from '../components/Context'
 
 const Product = () => {
 
   let [product, setProduct] = useState(null)
   let { id } = useParams()
+  let { theme, setTheme } = useContext(ThemeContext);
+
 
   let fetchselectedProducts = async () => {
     try {
@@ -28,10 +32,11 @@ const Product = () => {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       {(product) ?
         <section className="text-black body-font overflow-hidden bg-white">
-          <div className="container px-5 py-24 mx-auto">
+          <div className={`container px-5 py-24 mx-auto rounded-2xl  ${theme === 'dark' ? 'bg-green-200 text-black' : 'bg-amber-100 text-black'
+                }`}>
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
               <img
                 alt="ecommerce"
@@ -47,36 +52,36 @@ const Product = () => {
                 </h1>
                 <div className="flex mb-4">
                   <span className="flex items-center">
-                    {Array((Math.round((product.rating)||0)))?.fill(0)?.map((index) => {
-                      return(
+                    {Array((Math.round((product.rating) || 0)))?.fill(0)?.map((index) => {
+                      return (
                         <svg
-                      fill="currentColor"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      className="w-4 h-4 text-indigo-500"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
+                          fill="currentColor"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          className="w-4 h-4 text-indigo-500"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
                       )
                     })}
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
                     <span className="text-gray-600 ml-3">{product.rating}</span>
                   </span>
-                  
+
                 </div>
                 <p className="leading-relaxed">
                   {product.description}
                 </p>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                  
-                 
+
+
                 </div>
                 <div className="flex">
                   <span className="title-font font-medium text-2xl text-gray-900">

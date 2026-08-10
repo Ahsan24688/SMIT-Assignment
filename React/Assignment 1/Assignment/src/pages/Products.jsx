@@ -43,8 +43,8 @@ const Products = () => {
         :
         products.length > 0 ? (
           <>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'
-        }`}>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 m-4 p-4 rounded-2xl ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'
+              }`}>
               {products.map((product, index) => (
                 <div key={index}>
                   <Productcard
@@ -58,6 +58,10 @@ const Products = () => {
               ))}
             </div>
             <Footer />
+
+            {/* <div className='p-2 m-2 h-100 w-100 bg-amber-200 dark:bg-gray-900 text-white dark:text-blue-500'>
+                uvgfiyviesfhvifbvkjfbvfbvbvj
+            </div> */}
           </>
         ) : (
           <div className="text-center py-20">
