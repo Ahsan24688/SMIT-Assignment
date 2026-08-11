@@ -34,7 +34,7 @@ const Product = () => {
     <div>
       <Navbar />
       {(product) ?
-        <section className="text-black body-font overflow-hidden bg-white">
+        <section className="text-black body-font overflow-hidden bg-white m-4">
           <div className={`container px-5 py-24 mx-auto rounded-2xl  ${theme === 'dark' ? 'bg-green-200 text-black' : 'bg-amber-100 text-black'
                 }`}>
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
