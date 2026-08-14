@@ -65,13 +65,13 @@ const SearchProduct = () => {
             <Navbar />
             <div className="flex flex-col gap-4 m-4 p-4">
                 <input type="text" placeholder="Search Product" onChange={(e) => setSearchTerm(e.target.value)}
-                    className="border-2 rounded-lg p-2 justify-end bg-white" />
+                    className="border-2 rounded-lg p-2 bg-white md:w-1/2" />
             </div>
             <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-amber-200 text-black'}`}>
 
                 {
                     (loading) ? (
-                        <div className=' col-span-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 m-4 p-4 rounded-2xl'>
+                        <div className=' col-span-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-amber-200 dark:bg-gray-800 m-4 p-4 rounded-2xl'>
                             {[...Array(8)].map((index) => (
                                 <Skeleton key={index} />
                             ))}
