@@ -14,7 +14,7 @@ const Login = () => {
 
 
     return (
-        <div className={`flex flex-col items-center justify-center w-full m-4 transition-all duration-800 ease-in-out  rounded-2xl ${transition ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'} ${theme === 'dark' ? 'bg-indigo-300 text-black' : 'bg-amber-200 text-black'}`} >
+        <div className={`flex flex-col items-center justify-center w-full m-4 transition-all duration-800 ease-in-out w rounded-2xl ${transition ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'} ${theme === 'dark' ? 'bg-indigo-300 text-black' : 'bg-amber-200 text-black'}`} >
             <div className={`flex flex-col items-center justify-center bg-amber-200 m-4 p-4 rounded-2xl  gap-6 ${theme === 'dark' ? 'bg-indigo-400 text-black' : 'bg-amber-200 text-black'}`}>
                 <h1 className='font-bold text-2xl'>Login</h1>
                 <input type="email" placeholder='Enter your email' className='border-2 border-black rounded-2xl p-2 m-2 bg-white' />

@@ -33,13 +33,13 @@ const Navbar = () => {
           >
             {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
           </button>
-          <li className='m-2'>
+          <li className='m-2 hover:bg-blue-500 hover:text-white px-1 py-1 rounded'>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li className='m-2'>
+          <li className='m-2 hover:bg-blue-500 hover:text-white px-1 py-1 rounded'>
             <NavLink to="/Products">Products</NavLink>
           </li>
-          <li className='m-2'>
+          <li className='m-2 hover:bg-blue-500 hover:text-white px-1 py-1 rounded'>
             <NavLink to="/SearchProduct">Search Product</NavLink>
           </li>
           <li className='m-2'>
